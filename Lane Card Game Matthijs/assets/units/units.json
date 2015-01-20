@@ -47,7 +47,7 @@
 				"glancingChance": 20,
 				"cooldown": 20,
 				"burst": true,
-				"burstRate": 4,
+				"burstRate": 5,
 				"burstSize": 3,
 				"range": 300,
 				"moveSpeed": 5
@@ -101,7 +101,7 @@
 				"deathEnd": 0,
 				"numFrames": 14,
 				"numRows": 2,
-				"numColums": 8
+				"numColums": 2
 			}
 	}
 }

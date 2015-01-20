@@ -52,7 +52,7 @@ class Unit extends Sprite
 	var spritePath:String;
 	
 	// the total amount of frames
-	var frameCount:Int = 15;
+	var frameCount:Int;
 	var spriteRows:Int;
 	var spriteColums:Int;
 	var animationDone:Bool = true;
@@ -109,7 +109,7 @@ class Unit extends Sprite
 		spritePath = graphicData.spriteSheet;
 	
 		// the total amount of frames
-		frameCount = graphicData.numFrames; // plus one needed for code, allows actual amount of frames in the statsheets
+		frameCount = graphicData.numFrames;
 		spriteRows = graphicData.numRows;
 		spriteColums = graphicData.numColums;
 		animationDone = true;
@@ -123,7 +123,7 @@ class Unit extends Sprite
 
 		  
 		//specific animation start and end positions
-		idleFrame = graphicData.idleFrame;
+		idleFrame = graphicData.idleFrame - 1;
 		
 		// substract one to start counting from zero but leave matching frame count and last frame in units.json
 		walkStart = graphicData.walkStart - 1;
@@ -247,12 +247,9 @@ class Unit extends Sprite
 		// * the x position (in this case zero)
 		// * the y position (in this case zero)
 		// * the index of the image to draw (increments from 0 to 19 by use of the modulo operator: %)
-		unitTilesheet.drawTiles( this.graphics, [ -unitWidth/2, 0, currentUnitImage ], true );
+		unitTilesheet.drawTiles( this.graphics, [ -unitWidth/2, 0, currentUnitImage], true );
 		// point to the next index of the tile sheet's images
-		//trace(animState);
-		//trace(currentUnitImage + " " + curEnd);
 		
-
 		switch (animState)
 		{
 			case STATE_IDLE:
@@ -261,15 +258,19 @@ class Unit extends Sprite
 				}
 			case STATE_MOVING:
 				{
-					if( currentUnitImage >= walkEnd && currentUnitImage < walkStart) currentUnitImage = walkStart;
+					if( currentUnitImage >= walkEnd || currentUnitImage < walkStart) currentUnitImage = walkStart;
 					
 					else currentUnitImage ++;
 				}
 			case STATE_SHOOTING:
 				{
-					if (currentUnitImage > shootEnd && currentUnitImage < shootStart) currentUnitImage = shootStart;
+					if (currentUnitImage > shootEnd || currentUnitImage < shootStart) currentUnitImage = shootStart;
 					
-					else if (currentUnitImage == shootEnd) animState = STATE_IDLE;
+					else if (currentUnitImage == shootEnd)
+					{
+						currentUnitImage = idleFrame;
+						animState = STATE_IDLE;
+					}
 					
 					else currentUnitImage ++;
 					
@@ -308,13 +309,13 @@ class Unit extends Sprite
 			//trace("waiting");
 		}
 		*/
-		
-		/* old animation handeling frame limit
+		/*
+		 //old animation handeling frame limit
 		if( currentUnitImage >= frameCount )
 		{
 			currentUnitImage = 0;
-		}*/
-		/* old animation handeling
+		}
+		// old animation handeling
 		if ( attacking == false)
 		{
 			animationDone = false;
@@ -366,8 +367,16 @@ class Unit extends Sprite
 			unitTilesheet.addTileRect( unitRectangle );
 
 			// some math to recalculate the row and column for the next image of the animation
+			/* broken code: results in first 2 frames being on the same spot losing the last image of the animation
 			row = Math.floor( unitIndex / spriteRows );
 			column = unitIndex % spriteRows;
+			*/
+			column ++;
+			if (column == spriteRows)
+			{
+				column = 0;
+				row ++;
+			}
 		}
 	}
 	
