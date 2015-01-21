@@ -35,7 +35,39 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/East Card Back.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/East Card Front.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/Left UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/Mid UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/Right UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/RuBearRifle.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/Top UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/West Card Back.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/West Card Front.png");
 		types.push (AssetType.IMAGE);
 		
 		
@@ -113,6 +145,14 @@ class ApplicationMain {
 		
 		urls.push ("units/units.json");
 		types.push (AssetType.TEXT);
+		
+		
+		urls.push ("font/Coderscrux.ttf");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("font/Colleged.ttf");
+		types.push (AssetType.FONT);
 		
 		
 		

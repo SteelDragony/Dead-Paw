@@ -48,8 +48,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/BearAt.png", AssetType.IMAGE);
 		className.set ("img/Cat_Sprint.png", __ASSET__img_cat_sprint_png);
 		type.set ("img/Cat_Sprint.png", AssetType.IMAGE);
+		className.set ("img/East Card Back.png", __ASSET__img_east_card_back_png);
+		type.set ("img/East Card Back.png", AssetType.IMAGE);
+		className.set ("img/East Card Front.png", __ASSET__img_east_card_front_png);
+		type.set ("img/East Card Front.png", AssetType.IMAGE);
+		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
+		type.set ("img/Left UI.png", AssetType.IMAGE);
+		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
+		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
+		type.set ("img/Right UI.png", AssetType.IMAGE);
 		className.set ("img/RuBearRifle.png", __ASSET__img_rubearrifle_png);
 		type.set ("img/RuBearRifle.png", AssetType.IMAGE);
+		className.set ("img/Top UI.png", __ASSET__img_top_ui_png);
+		type.set ("img/Top UI.png", AssetType.IMAGE);
+		className.set ("img/West Card Back.png", __ASSET__img_west_card_back_png);
+		type.set ("img/West Card Back.png", AssetType.IMAGE);
+		className.set ("img/West Card Front.png", __ASSET__img_west_card_front_png);
+		type.set ("img/West Card Front.png", AssetType.IMAGE);
 		className.set ("img/YPR.png", __ASSET__img_ypr_png);
 		type.set ("img/YPR.png", AssetType.IMAGE);
 		className.set ("audio/Amb_1.mp3", __ASSET__audio_amb_1_mp3);
@@ -88,6 +104,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/Tank_fire_5.wav", AssetType.SOUND);
 		className.set ("units/units.json", __ASSET__units_units_json);
 		type.set ("units/units.json", AssetType.TEXT);
+		className.set ("font/Coderscrux.ttf", __ASSET__font_coderscrux_ttf);
+		type.set ("font/Coderscrux.ttf", AssetType.FONT);
+		className.set ("font/Colleged.ttf", __ASSET__font_colleged_ttf);
+		type.set ("font/Colleged.ttf", AssetType.FONT);
 		
 		
 		#elseif html5
@@ -101,7 +121,39 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "img/East Card Back.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/East Card Front.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/Left UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/Mid UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/Right UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "img/RuBearRifle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/Top UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/West Card Back.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/West Card Front.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -181,6 +233,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "font/Coderscrux.ttf";
+		className.set (id, __ASSET__font_coderscrux_ttf);
+		
+		type.set (id, AssetType.FONT);
+		id = "font/Colleged.ttf";
+		className.set (id, __ASSET__font_colleged_ttf);
+		
+		type.set (id, AssetType.FONT);
 		
 		
 		#else
@@ -210,6 +270,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		openfl.text.Font.registerFont (__ASSET__font_coderscrux_ttf);
+		openfl.text.Font.registerFont (__ASSET__font_colleged_ttf);
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -222,8 +292,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("img/Cat_Sprint.png", __ASSET__img_cat_sprint_png);
 		type.set ("img/Cat_Sprint.png", AssetType.IMAGE);
 		
+		className.set ("img/East Card Back.png", __ASSET__img_east_card_back_png);
+		type.set ("img/East Card Back.png", AssetType.IMAGE);
+		
+		className.set ("img/East Card Front.png", __ASSET__img_east_card_front_png);
+		type.set ("img/East Card Front.png", AssetType.IMAGE);
+		
+		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
+		type.set ("img/Left UI.png", AssetType.IMAGE);
+		
+		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
+		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		
+		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
+		type.set ("img/Right UI.png", AssetType.IMAGE);
+		
 		className.set ("img/RuBearRifle.png", __ASSET__img_rubearrifle_png);
 		type.set ("img/RuBearRifle.png", AssetType.IMAGE);
+		
+		className.set ("img/Top UI.png", __ASSET__img_top_ui_png);
+		type.set ("img/Top UI.png", AssetType.IMAGE);
+		
+		className.set ("img/West Card Back.png", __ASSET__img_west_card_back_png);
+		type.set ("img/West Card Back.png", AssetType.IMAGE);
+		
+		className.set ("img/West Card Front.png", __ASSET__img_west_card_front_png);
+		type.set ("img/West Card Front.png", AssetType.IMAGE);
 		
 		className.set ("img/YPR.png", __ASSET__img_ypr_png);
 		type.set ("img/YPR.png", AssetType.IMAGE);
@@ -281,6 +375,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("units/units.json", __ASSET__units_units_json);
 		type.set ("units/units.json", AssetType.TEXT);
+		
+		className.set ("font/Coderscrux.ttf", __ASSET__font_coderscrux_ttf);
+		type.set ("font/Coderscrux.ttf", AssetType.FONT);
+		
+		className.set ("font/Colleged.ttf", __ASSET__font_colleged_ttf);
+		type.set ("font/Colleged.ttf", AssetType.FONT);
 		*/
 		var useManifest = true;
 		
@@ -855,7 +955,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind #if display private #end class __ASSET__img_bearat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_cat_sprint_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_east_card_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_east_card_front_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_left_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_mid_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_right_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_rubearrifle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_top_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_west_card_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_west_card_front_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_ypr_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__audio_amb_1_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_at4_1_wav extends flash.media.Sound { }
@@ -875,6 +983,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_4_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_5_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__units_units_json extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__font_coderscrux_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__font_colleged_ttf extends flash.text.Font { }
 
 
 #elseif html5
@@ -903,11 +1013,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Coderscrux.ttf"; } } 
+@:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Colleged.ttf"; } } 
+
 #end
 
 #else
 
 #if openfl
+class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Coderscrux.ttf"; fontName = "Coder's Crux Regular"; }}
+class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Colleged.ttf"; fontName = "Colleged"; }}
 
 #end
 
@@ -916,7 +1038,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 //
 //@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Top UI.png") class __ASSET__img_top_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/West Card Back.png") class __ASSET__img_west_card_back_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/West Card Front.png") class __ASSET__img_west_card_front_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/YPR.png") class __ASSET__img_ypr_png extends openfl.display.BitmapData {}
 //@:sound("assets/audio/Amb_1.mp3") class __ASSET__audio_amb_1_mp3 extends openfl.media.Sound {}
 //@:sound("assets/audio/AT4_1.wav") class __ASSET__audio_at4_1_wav extends openfl.media.Sound {}
@@ -936,6 +1066,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 //@:sound("assets/audio/Tank_fire_4.wav") class __ASSET__audio_tank_fire_4_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/Tank_fire_5.wav") class __ASSET__audio_tank_fire_5_wav extends openfl.media.Sound {}
 //@:file("assets/units/units.json") class __ASSET__units_units_json extends lime.utils.ByteArray {}
+//@:font("assets/font/Coderscrux.ttf") class __ASSET__font_coderscrux_ttf extends openfl.text.Font {}
+//@:font("assets/font/Colleged.ttf") class __ASSET__font_colleged_ttf extends openfl.text.Font {}
 //
 //
 

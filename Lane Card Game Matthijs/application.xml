@@ -22,6 +22,7 @@
 	<assets path="assets/img" rename="img" />
 	<assets path="assets/audio" rename="audio" />
 	<assets path="assets/units" rename="units" />
+	<assets path="assets/font" rename="font" />
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->

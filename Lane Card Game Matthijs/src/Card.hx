@@ -139,6 +139,7 @@ class Card extends Sprite
 		trace(unitStats);
 		trace(unitGraphics);
 		*/
+		addEventListener(Event.ADDED_TO_STAGE, drawCards);
 		addEventListener(Event.ADDED_TO_STAGE, drawGraphics);
 		//drawGraphics();
 	}
@@ -153,27 +154,31 @@ class Card extends Sprite
 	{
 		this.stopDrag();
 	}
-	
+			
 	function drawGraphics(e:Event)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, drawGraphics);
-		this.graphics.beginFill(0xFFFFFF);
-		this.graphics.drawRoundRect(0, 0, 100, 100, 10, 10);
-		this.graphics.endFill();
+		// this.graphics.beginFill(0xFFFFFF);
+		// this.graphics.drawRoundRect(0, 0, 100, 100, 10, 10);
+		// this.graphics.endFill();
 		// if (this.side == 1) this.x += 800; // testing code
-		
+	
 		var data:BitmapData = Assets.getBitmapData(unitGraphics.spriteSheet);
 		var image = new Tilesheet(data);
 		var unitRectangle:Rectangle = new Rectangle( 0, 0, unitGraphics.spriteWidth, unitGraphics.spriteHeight );
-		
 		var unitRectangle2:Rectangle = new Rectangle( 0, 0, unitGraphics.spriteWidth, unitGraphics.spriteHeight );
-
-		// add the rectangle of the next image in the sprite sheet
+		//add the rectangle of the next image in the sprite sheet
 		image.addTileRect( unitRectangle );
 		image.addTileRect( unitRectangle2 );
-		
 		image.drawTiles( this.graphics, [ 0, 0, 1 ], true );
 	}
-
 	
+	function drawCards(e:Event)
+	{
+		removeEventListener(Event.ADDED_TO_STAGE, drawCards);
+		var getCard:BitmapData = Assets.getBitmapData("img/West Card Front.png");
+		graphics.beginBitmapFill (getCard);
+		graphics.drawRect (0, 0, getCard.width, getCard.height);
+		
+	}
 }

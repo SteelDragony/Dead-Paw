@@ -31,6 +31,10 @@ class Game extends Sprite
 	var hand2:Hand;
 	var unithandler:Unithandler;
 	
+	//variables to store resources
+	public var resourcesPlayer1:Int;
+	public var resroucesPlayer2:Int;
+	
 	//array for looping through the lanes
 	var lanes = new Array<Lane>();
 	
@@ -40,6 +44,8 @@ class Game extends Sprite
 	var musicvolume:Float = 1.0 ;
 	var music = new Music ();
 	var sound = new Sound ();
+	var userinterface:Userinterface;
+	var drag:Bool = false;
 	
 	/* ENTRY POINT */
 	
@@ -67,6 +73,12 @@ function resize(e)
 		
 		unithandler = new Unithandler();
 		addChild(unithandler);
+		userinterface = new Userinterface();
+		addChild(userinterface);
+		resourcesPlayer1 = 19;
+		resourcesPlayer1 = 19;
+		player1hp = 24;
+		player2hp = 25;
 		
 		//unit test code, will be removed
 		/*
@@ -107,6 +119,12 @@ function resize(e)
 	public function update()
 	{
 		unithandler.update();
+		userinterface.uiUpdate(units1, units2, player1hp, player2hp, resourcesPlayer1, resroucesPlayer2);
+		if (drag == false)
+		{
+		hand1.update();
+		hand2.update();
+		}
 		// side 1 units
 		/*
 		for ( unit1 in units1)
@@ -176,6 +194,7 @@ function resize(e)
 	// might make card child of game, but how to handle false plays?
 	public function cardDrag(card:Card)
 	{
+		drag = true;
 		for (lane in lanes)
 		{
 			if (card.y < (lane.y + lane.height) && card.y > (lane.y))
@@ -207,6 +226,7 @@ function resize(e)
 				}
 				
 				sound.playSound("click");
+				drag = false;
 			}	
 		}
 	}
