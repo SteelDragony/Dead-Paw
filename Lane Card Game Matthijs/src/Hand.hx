@@ -3,7 +3,7 @@ import openfl.display.Sprite;
 import openfl.events.MouseEvent;
 
 /**
- * ...
+ * Stores the hands of both players and gives x and y values to the cards.
  * @author Matthijs van Gelder
  */
 class Hand extends Sprite
@@ -11,7 +11,6 @@ class Hand extends Sprite
 	var game:Game;
 	var playerSide:Int;
 	var hand = new Array<Card>();
-	
 	
 	public function new( g:Game, side:Int ) 
 	{
@@ -21,27 +20,44 @@ class Hand extends Sprite
 		update();
 		
 	}
-	
+	// Dislpay cards for player 1 & 2
+	// Displays cards for player 1 on the bottom of the screen these units move from LEFT to RIGHT
+	// Displays cards for player 2 on the top of the screen these units move from RIGHT to LEFT
 	public function update()
 	{
-		for ( card in hand )
+		if (playerSide == 1)
 		{
-		card.x = 140 + 160 * hand.indexOf(card);
-		card.y = 500;
+			for ( card in hand )
+			{
+				card.x = 245 + 160 * hand.indexOf(card);
+				card.y = 590;
+			}
+		}
+		
+		if (playerSide == 2)
+		{
+			for ( card in hand)
+			{
+				card.x = 0 + 170 * hand.indexOf(card);
+				card.y = 10;
+			}
 		}
 	}
 	
+	// Used to add cards to the hands
 	public function addCard(unitType:String, soundHandler:Sound)
 	{
-		var card = new Card(playerSide, unitType, soundHandler);
+		var card = new Card(this, playerSide, unitType, soundHandler);
 		addChild(card);
 		hand.push(card);
 		card.addEventListener(MouseEvent.MOUSE_UP, sendToGame);
 	}
-	
+	// Sends to chosen card to the game
+	// Removes it from the array so more cards fit in
 	function sendToGame(e:MouseEvent)
 	{
 		game.cardDrag(e.currentTarget);
+		hand.remove(e.currentTarget);
 	}
 	
 }

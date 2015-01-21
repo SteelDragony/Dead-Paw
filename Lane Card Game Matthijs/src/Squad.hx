@@ -58,7 +58,7 @@ class Squad extends Sprite
 			var unit = new Unit(this, unitStatistics.health, unitStatistics.softDamage, side, unitStatistics, unitVisuals, soundReference);
 			unit.x = 50 + formation[i].x;
 			unit.y = (lane.y + lane.height / 2) + formation[i].y - (unit.unitHeight / 2);
-			if (side == 1) unit.x += 800;
+			if (side == 2) unit.x += 800;
 			addChild(unit);
 			squadMembers.push(unit);
 		}

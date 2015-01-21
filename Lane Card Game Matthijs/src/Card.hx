@@ -27,6 +27,7 @@ import typedefs.VisualData;
 class Card extends Sprite
 {
 	var game:Game;
+	var hand:Hand;
 	
 	public var unitStats:UnitStats;
 	public var unitGraphics:VisualData;
@@ -37,7 +38,7 @@ class Card extends Sprite
 	
 	var unitType:String = "YPR";
 	
-	public function new(player:Int, unittype:String, soundClass:Sound) 
+	public function new(handplayer:Hand, player:Int, unittype:String, soundClass:Sound) 
 	{
 		super();
 		side = player;
@@ -153,8 +154,10 @@ class Card extends Sprite
 	function stopdragging(e:MouseEvent)
 	{
 		this.stopDrag();
+		hand.update();
 	}
-			
+
+	// Draws the first imageof a spirite sheet onto the card
 	function drawGraphics(e:Event)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, drawGraphics);
@@ -172,7 +175,7 @@ class Card extends Sprite
 		image.addTileRect( unitRectangle2 );
 		image.drawTiles( this.graphics, [ 0, 0, 1 ], true );
 	}
-	
+	// Draws a standard Card to display stats
 	function drawCards(e:Event)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, drawCards);
