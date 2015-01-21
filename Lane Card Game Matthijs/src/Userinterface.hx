@@ -19,8 +19,8 @@ class Userinterface extends Sprite
 	var healthBaseCount2:Int;
 	var resourceCount1:Int;
 	var resourceCount2:Int;
-	var handCount1:Array<Unit>;
-	var handCount2:Array<Unit>;
+	var handP1:Hand;
+	var handP2:Hand;
 	var currentTime:Float = 0;
 	var timeUntillCard:Int = 3;
 	var time = new TextField();
@@ -85,10 +85,10 @@ class Userinterface extends Sprite
 	}
 	
 	// Updates the user interface every frame
-	public function uiUpdate(handplayer1:Array<Unit>, handplayer2:Array<Unit>, healthBaseplayer1:Int, healthBasePlayer2:Int, resourcePlayer1:Int, resourcePlayer2:Int )
+	public function uiUpdate(handplayer1:Hand, handplayer2:Hand, healthBaseplayer1:Int, healthBasePlayer2:Int, resourcePlayer1:Int, resourcePlayer2:Int )
 	{
-		handCount1 = handplayer1;
-		handplayer2 = handCount2;
+		handP1 = handplayer1;
+		handP2 = handplayer2;
 		healthBaseCount1 = healthBaseplayer1;
 		healthBaseCount2 = healthBasePlayer2;
 		resourceCount1 = resourcePlayer1;
