@@ -214,21 +214,31 @@ class Unit extends Sprite
 
 	function fireShot(target:Unit, setCooldown:Int)
 	{
-		if (target.armor == 0)
+		if (Std.random(101) > accuracy)
 		{
+			trace("Miss");
 			animState = STATE_SHOOTING;
-			//trace("Soft");
-			target.health -= this.softDamage;
 			cooldownTimer = setCooldown;
 			sound.playSound("autoCannon");
 		}
-		else if (apDamage > target.armor)
+		else
 		{
-			animState = STATE_SHOOTING;
-			//trace("armor");
-			target.health -= (apDamage - target.armor);
-			cooldownTimer = setCooldown;
-			sound.playSound("autoCannon");
+			if (target.armor == 0)
+			{
+				animState = STATE_SHOOTING;
+				//trace("Soft");
+				target.health -= this.softDamage;
+				cooldownTimer = setCooldown;
+				sound.playSound("autoCannon");
+			}
+			else if (apDamage > target.armor)
+			{
+				animState = STATE_SHOOTING;
+				//trace("armor");
+				target.health -= (apDamage - target.armor);
+				cooldownTimer = setCooldown;
+				sound.playSound("autoCannon");
+			}
 		}
 	}
 	
