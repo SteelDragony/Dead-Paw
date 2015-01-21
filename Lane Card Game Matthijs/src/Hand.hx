@@ -10,6 +10,8 @@ class Hand extends Sprite
 {
 	var game:Game;
 	var playerSide:Int;
+	var hand = new Array<Card>();
+	
 	
 	public function new( g:Game, side:Int ) 
 	{
@@ -20,18 +22,20 @@ class Hand extends Sprite
 		
 	}
 	
-	function update()
+	public function update()
 	{
-		// card dragging test need to modify
-		// addCard("YPR");
-		// addCard("BearRifle");
+		for ( card in hand )
+		{
+		card.x = 140 + 160 * hand.indexOf(card);
+		card.y = 500;
+		}
 	}
 	
 	public function addCard(unitType:String, soundHandler:Sound)
 	{
 		var card = new Card(playerSide, unitType, soundHandler);
 		addChild(card);
-		if (unitType == "YPR") card.x += 120;
+		hand.push(card);
 		card.addEventListener(MouseEvent.MOUSE_UP, sendToGame);
 	}
 	
