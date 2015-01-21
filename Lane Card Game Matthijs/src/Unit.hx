@@ -355,7 +355,7 @@ class Unit extends Sprite
 
 		// get image from assets folder and create tileSheet object
 		var unitBitmapData:BitmapData = Assets.getBitmapData( spritePath );
-		unitTilesheet = new Tilesheet( unitBitmapData );
+		unitTilesheet = new Tilesheet( unitBitmapData );	
 
 		// loop to get all the seperate images from the sprite sheet
 		for( unitIndex in 0...frameCount)
