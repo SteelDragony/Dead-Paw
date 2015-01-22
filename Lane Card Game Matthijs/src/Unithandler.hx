@@ -57,8 +57,8 @@ class Unithandler extends Sprite
 	public function spawnSquad(unitsStats:UnitStats, unitGraphics:VisualData, soundRef:Sound, side:Int, size:Int, lane:Lane)
 	{
 		var squad = new Squad(unitsStats,unitGraphics, soundRef, side, lane);
-		if (side == 0) squads1.push(squad);
-		else if (side == 1) squads2.push(squad);
+		if (side == 1) squads1.push(squad);
+		else if (side == 2) squads2.push(squad);
 		addChild(squad);
 	}
 	

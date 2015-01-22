@@ -104,7 +104,7 @@ class Unit extends Sprite
 		
 		side = player;
 		this.squad = parentSquad;
-		if (side == 1) this.scaleX = -1;
+		if (side == 2) this.scaleX = -1;
 		
 		spritePath = graphicData.spriteSheet;
 	
@@ -156,11 +156,11 @@ class Unit extends Sprite
 	//move it left or right, depending on witch side this unit belongs to.
 	function move()
 	{
-		if (side == 0 && attacking == false)
+		if (side == 1 && attacking == false)
 		{
 			this.x += moveSpeed;
 		}
-		if (side == 1 && attacking == false)
+		if (side == 2 && attacking == false)
 		{
 			this.x -= moveSpeed;
 		}

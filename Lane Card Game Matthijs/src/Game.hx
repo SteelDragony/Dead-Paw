@@ -45,7 +45,7 @@ class Game extends Sprite
 	var music = new Music ();
 	var sound = new Sound ();
 	var userinterface:Userinterface;
-	var drag:Bool = false;
+	public var handChange:Bool = true;
 	
 	/* ENTRY POINT */
 	
@@ -96,8 +96,8 @@ function resize(e)
 		*/
 		
 		//hand test code, needs to be changed
-		hand1 = new Hand( this, 0 );
-		hand2 = new Hand( this, 1 );
+		hand1 = new Hand( this, 1 );
+		hand2 = new Hand( this, 2 );
 		addChild(hand1);
 		addChild(hand2);
 		hand1.addCard("YPR", sound);
@@ -105,7 +105,6 @@ function resize(e)
 		hand1.addCard("BearAt", sound);
 		hand2.addCard("YPR", sound);
 		hand2.addCard("BearRifle", sound);
-		hand2.x += 800;
 		
 		for ( i in 0 ... 5 )
 		{
@@ -119,11 +118,12 @@ function resize(e)
 	public function update()
 	{
 		unithandler.update();
-		userinterface.uiUpdate(units1, units2, player1hp, player2hp, resourcesPlayer1, resroucesPlayer2);
-		if (drag == false)
+		userinterface.uiUpdate(hand1, hand2, player1hp, player2hp, resourcesPlayer1, resroucesPlayer2);
+		if ( handChange == true)
 		{
 		hand1.update();
 		hand2.update();
+		handChange = false;
 		}
 		// side 1 units
 		/*
@@ -194,7 +194,6 @@ function resize(e)
 	// might make card child of game, but how to handle false plays?
 	public function cardDrag(card:Card)
 	{
-		drag = true;
 		for (lane in lanes)
 		{
 			if (card.y < (lane.y + lane.height) && card.y > (lane.y))
@@ -204,30 +203,29 @@ function resize(e)
 				removeChild(card);
 				if (card.unitGraphics.spriteSheet == "img/YPR.png")
 				{
-					if (card.side == 0)
-					{
-						hand1.addCard("YPR", sound);
-					}
 					if (card.side == 1)
 					{
-						hand2.addCard("YPR", sound);
+						// hand1.addCard("YPR", sound);
+					}
+					if (card.side == 2)
+					{
+						// hand2.addCard("YPR", sound);
 					}
 				}
 				else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
 				{
-					if (card.side == 0)
-					{
-						hand1.addCard("BearRifle", sound);
-					}
 					if (card.side == 1)
 					{
-						hand2.addCard("BearRifle", sound);
+						// hand1.addCard("BearRifle", sound);
+					}
+					if (card.side == 2)
+					{
+						// hand2.addCard("BearRifle", sound);
 					}
 				}
-				
 				sound.playSound("click");
-				drag = false;
-			}	
+				handChange = true;
+			}
 		}
 	}
 	
