@@ -20,10 +20,10 @@ import openfl.Assets;
 class Unit extends Sprite
 {
 	// initialize variables for this unit
-	public var health:Int;
+	public var health:Float;
 	public var armor:Int;
-	var softDamage:Int;
-	var apDamage:Int;
+	var softDamage:Float;
+	var apDamage:Float;
 	var accuracy:Int;
 	var critChance:Int;
 	var glancingChance:Int;
@@ -84,7 +84,7 @@ class Unit extends Sprite
 	var unitTilesheet:Tilesheet;
 		
 	//assign values to the variables for specific unit
-	public function new(parentSquad:Squad, hp:Int, dmg:Int, player:Int, stats:UnitStats, graphicData:VisualData, soundReference:Sound) 
+	public function new(parentSquad:Squad,player:Int, stats:UnitStats, graphicData:VisualData, soundReference:Sound) 
 	{
 		super();
 		health = stats.health;
@@ -93,7 +93,7 @@ class Unit extends Sprite
 		apDamage = stats.apDamage;
 		accuracy = stats.accuracy;
 		critChance = stats.critChance;
-		glancingChance = stats.glancingChace;
+		glancingChance = stats.glancingChance;
 		cooldown = stats.cooldown;
 		burst = stats.burst;
 		burstRate = stats.burstRate;
@@ -258,11 +258,23 @@ class Unit extends Sprite
 		}
 		else
 		{
+			var damageModifier:Float = 1;
+			var randomNumber:Int = Std.random(101);
+			if (critChance > randomNumber)
+			{
+				damageModifier = 1.2;
+				trace("CRIT!");
+			}
+			else if (glancingChance + critChance > randomNumber)
+			{
+				damageModifier = 0.8;
+				trace("GLANCING HIT!");
+			}
 			if (target.armor == 0)
 			{
 				animState = STATE_SHOOTING;
 				//trace("Soft");
-				target.health -= this.softDamage;
+				target.health -= this.softDamage * damageModifier;
 				cooldownTimer = setCooldown;
 				sound.playSound("autoCannon");
 			}
@@ -270,7 +282,7 @@ class Unit extends Sprite
 			{
 				animState = STATE_SHOOTING;
 				//trace("armor");
-				target.health -= (apDamage - target.armor);
+				target.health -= (apDamage * damageModifier - target.armor);
 				cooldownTimer = setCooldown;
 				sound.playSound("autoCannon");
 			}

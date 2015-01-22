@@ -55,7 +55,7 @@ class Squad extends Sprite
 		removeEventListener(Event.ADDED_TO_STAGE, added);
 		for (i in 0 ... 1) 
 		{
-			var unit = new Unit(this, unitStatistics.health, unitStatistics.softDamage, side, unitStatistics, unitVisuals, soundReference);
+			var unit = new Unit(this, side, unitStatistics, unitVisuals, soundReference);
 			unit.x = 50 + formation[i].x;
 			unit.y = (lane.y + lane.height / 2) + formation[i].y - (unit.unitHeight / 2);
 			if (side == 2) unit.x += 800;
