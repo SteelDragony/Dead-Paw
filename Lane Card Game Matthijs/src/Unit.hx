@@ -93,7 +93,7 @@ class Unit extends Sprite
 		apDamage = stats.apDamage;
 		accuracy = stats.accuracy;
 		critChance = stats.critChance;
-		glancingChance = stats.glancingChace;
+		glancingChance = stats.glancingChance;
 		cooldown = stats.cooldown;
 		burst = stats.burst;
 		burstRate = stats.burstRate;
@@ -223,11 +223,23 @@ class Unit extends Sprite
 		}
 		else
 		{
+			var damageModifier:Float = 1;
+			var randomNumber:Int = Std.random(101);
+			if (critChance > randomNumber)
+			{
+				damageModifier = 1.2;
+				trace("CRIT!");
+			}
+			else if (glancingChance + critChance > randomNumber)
+			{
+				damageModifier = 0.8;
+				trace("GLANCING HIT!");
+			}
 			if (target.armor == 0)
 			{
 				animState = STATE_SHOOTING;
 				//trace("Soft");
-				target.health -= this.softDamage;
+				target.health -= this.softDamage * damageModifier;
 				cooldownTimer = setCooldown;
 				sound.playSound("autoCannon");
 			}
@@ -235,7 +247,7 @@ class Unit extends Sprite
 			{
 				animState = STATE_SHOOTING;
 				//trace("armor");
-				target.health -= (apDamage - target.armor);
+				target.health -= (apDamage * damageModifier - target.armor);
 				cooldownTimer = setCooldown;
 				sound.playSound("autoCannon");
 			}

@@ -12,7 +12,7 @@ typedef UnitStats =
 	var apDamage : Float;
 	var accuracy : Int;
 	var critChance : Int;
-	var glancingChace : Int;
+	var glancingChance : Int;
 	var cooldown : Int;
 	var burst : Bool;
 	var burstRate : Int;
