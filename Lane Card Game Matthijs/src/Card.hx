@@ -147,12 +147,13 @@ class Card extends Sprite
 	
 	function drag(e:MouseEvent)
 	{
-	stage.addEventListener(MouseEvent.MOUSE_UP, stopdragging);
-	this.startDrag();
+		stage.addEventListener(MouseEvent.MOUSE_UP, stopdragging);
+		this.startDrag();
 	}
 	
-	function stopdragging(e:MouseEvent)
+	public function stopdragging(e:MouseEvent)
 	{
+		// stage.removeEventListener(MouseEvent.MOUSE_UP, stopdragging);
 		this.stopDrag();
 		hand.update();
 	}
@@ -169,8 +170,6 @@ class Card extends Sprite
 		image.addTileRect( unitRectangle );
 		image.addTileRect( unitRectangle2 );
 		image.drawTiles( this.graphics, [ (-unitGraphics.spriteWidth/2)+75 ,(-unitGraphics.spriteHeight/2 +85), 0], true );
-
-		
 	}
 	// Draws a standard Card to display stats
 	function drawCards(e:Event)

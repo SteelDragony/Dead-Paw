@@ -25,6 +25,7 @@ class Hand extends Sprite
 	// Displays cards for player 2 on the top of the screen these units move from RIGHT to LEFT
 	public function update()
 	{
+		// trace (handArray);
 		if (playerSide == 1)
 		{
 			for ( card in handArray )
@@ -38,7 +39,7 @@ class Hand extends Sprite
 		{
 			for ( card in handArray)
 			{
-				card.x = 0 + 170 * handArray.indexOf(card);
+				card.x = 10 + 160 * handArray.indexOf(card);
 				card.y = 10;
 			}
 		}
@@ -57,7 +58,6 @@ class Hand extends Sprite
 	function sendToGame(e:MouseEvent)
 	{
 		game.cardDrag(e.currentTarget);
-		handArray.remove(e.currentTarget);
 	}
 	
 }
