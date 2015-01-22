@@ -22,13 +22,14 @@ class Userinterface extends Sprite
 	var handP1:Hand;
 	var handP2:Hand;
 	var currentTime:Float = 0;
-	var timeUntillCard:Int = 3;
+	var timeUntillCard:Float = 3;
 	var time = new TextField();
 	var score = new TextField();
 	var resources = new TextField();
 	var timeCard = new TextField();
 	var rightFormat = new TextFormat();
 	var centerFormat = new TextFormat();
+	var stamp:Float;
 	
 	public function new() 
 	{
@@ -109,7 +110,7 @@ class Userinterface extends Sprite
 		// trace (currentTime);
 		// trace(stamp);
 		time.text = ("");
-		var stamp:Float = Timer.stamp();
+		stamp = Timer.stamp();
 		var second = Std.int(stamp);
 		time.background = false;
 		time.x = 550;
@@ -168,11 +169,30 @@ class Userinterface extends Sprite
 		timeCard.selectable = false;
 		timeCard.defaultTextFormat = rightFormat;
 		// add something here to keep track of the players hand and the time
-		
-		timeCard.text = (timeUntillCard + "Sec");
+		var tempArray:Array<Card> = handP1.handArray; 
+		if (tempArray.length < 5)
+		{
+			
+			if (timeUntillCard <= 0)
+			{
+				timeUntillCard = 4;
+				// Add function call here to deck to add card.
+			}
+			if (timeUntillCard > 3)
+			{
+				timeUntillCard = 3;
+			}
+			timeUntillCard -= 0.05;
+			
+		}
+		if (tempArray.length == 5 )
+		{
+			timeUntillCard = 99;
+		}
+		var timeUntillCardSecond:Int = Std.int(timeUntillCard);
+		timeCard.text = (timeUntillCardSecond + "Sec");
 		timeCard.embedFonts = true;
 		addChild(timeCard);
-		
 	}
 	
 }

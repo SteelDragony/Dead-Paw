@@ -100,6 +100,8 @@ function resize(e)
 		hand2 = new Hand( this, 2 );
 		addChild(hand1);
 		addChild(hand2);
+		hand1.addCard("YPR", sound); 
+		hand1.addCard("YPR", sound);
 		hand1.addCard("YPR", sound);
 		hand1.addCard("BearRifle", sound);
 		hand1.addCard("BearAt", sound);
@@ -205,22 +207,22 @@ function resize(e)
 				{
 					if (card.side == 1)
 					{
-						// hand1.addCard("YPR", sound);
+						//hand1.addCard("YPR", sound);
 					}
 					if (card.side == 2)
 					{
-						// hand2.addCard("YPR", sound);
+						//hand2.addCard("YPR", sound);
 					}
 				}
 				else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
 				{
 					if (card.side == 1)
 					{
-						// hand1.addCard("BearRifle", sound);
+						hand1.addCard("BearRifle", sound);
 					}
 					if (card.side == 2)
 					{
-						// hand2.addCard("BearRifle", sound);
+						hand2.addCard("BearRifle", sound);
 					}
 				}
 				sound.playSound("click");
