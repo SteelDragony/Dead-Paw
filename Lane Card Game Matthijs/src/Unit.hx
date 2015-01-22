@@ -222,21 +222,21 @@ class Unit extends Sprite
 				if (burstSize > currentshot)
 				{
 					currentshot ++;
-					currentGame.player2hp -= this.softDamage;
+					currentGame.player2hp -= Std.int(this.softDamage);
 					animState = STATE_SHOOTING;
 					cooldownTimer = burstRate;
 				}
 				else 
 				{
 					currentshot = 1;
-					currentGame.player2hp -= this.softDamage;
+					currentGame.player2hp -= Std.int(this.softDamage);
 					animState = STATE_SHOOTING;
 					cooldownTimer = cooldown;
 				}
 			}
 			else if (cooldownTimer <= 0)
 			{
-				currentGame.player2hp -= this.softDamage;
+				currentGame.player2hp -= Std.int(this.softDamage);
 				animState = STATE_SHOOTING;
 				cooldownTimer = cooldown;
 			}
