@@ -46,7 +46,7 @@ class Card extends Sprite
 		unitType = unittype;
 		var jsonin = Assets.getText("units/units.json");
 		unitin = Json.parse(jsonin);
-		
+		hand = handplayer;
 		unitStats = Reflect.getProperty(this.unitin, unittype).unitStats;
 		unitGraphics = Reflect.getProperty(this.unitin, unittype).unitGraphics;
 		
@@ -161,11 +161,6 @@ class Card extends Sprite
 	function drawGraphics(e:Event)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, drawGraphics);
-		// this.graphics.beginFill(0xFFFFFF);
-		// this.graphics.drawRoundRect(0, 0, 100, 100, 10, 10);
-		// this.graphics.endFill();
-		// if (this.side == 1) this.x += 800; // testing code
-	
 		var data:BitmapData = Assets.getBitmapData(unitGraphics.spriteSheet);
 		var image = new Tilesheet(data);
 		var unitRectangle:Rectangle = new Rectangle( 0, 0, unitGraphics.spriteWidth, unitGraphics.spriteHeight );
@@ -173,7 +168,9 @@ class Card extends Sprite
 		//add the rectangle of the next image in the sprite sheet
 		image.addTileRect( unitRectangle );
 		image.addTileRect( unitRectangle2 );
-		image.drawTiles( this.graphics, [ 0, 0, 1 ], true );
+		image.drawTiles( this.graphics, [ (-unitGraphics.spriteWidth/2)+75 ,(-unitGraphics.spriteHeight/2 +85), 0], true );
+
+		
 	}
 	// Draws a standard Card to display stats
 	function drawCards(e:Event)

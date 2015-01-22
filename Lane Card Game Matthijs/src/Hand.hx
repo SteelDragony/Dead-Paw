@@ -10,7 +10,7 @@ class Hand extends Sprite
 {
 	var game:Game;
 	var playerSide:Int;
-	var hand = new Array<Card>();
+	public var handArray = new Array<Card>();
 	
 	public function new( g:Game, side:Int ) 
 	{
@@ -27,18 +27,18 @@ class Hand extends Sprite
 	{
 		if (playerSide == 1)
 		{
-			for ( card in hand )
+			for ( card in handArray )
 			{
-				card.x = 245 + 160 * hand.indexOf(card);
+				card.x = 245 + 160 * handArray.indexOf(card);
 				card.y = 590;
 			}
 		}
 		
 		if (playerSide == 2)
 		{
-			for ( card in hand)
+			for ( card in handArray)
 			{
-				card.x = 0 + 170 * hand.indexOf(card);
+				card.x = 0 + 170 * handArray.indexOf(card);
 				card.y = 10;
 			}
 		}
@@ -49,7 +49,7 @@ class Hand extends Sprite
 	{
 		var card = new Card(this, playerSide, unitType, soundHandler);
 		addChild(card);
-		hand.push(card);
+		handArray.push(card);
 		card.addEventListener(MouseEvent.MOUSE_UP, sendToGame);
 	}
 	// Sends to chosen card to the game
@@ -57,7 +57,7 @@ class Hand extends Sprite
 	function sendToGame(e:MouseEvent)
 	{
 		game.cardDrag(e.currentTarget);
-		hand.remove(e.currentTarget);
+		handArray.remove(e.currentTarget);
 	}
 	
 }
