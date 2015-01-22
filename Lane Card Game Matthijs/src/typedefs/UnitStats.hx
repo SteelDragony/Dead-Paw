@@ -6,10 +6,10 @@ package typedefs ;
 
 typedef UnitStats =
 {
-	var health : Int;
+	var health : Float;
 	var armor : Int;
-	var softDamage : Int;
-	var apDamage : Int;
+	var softDamage : Float;
+	var apDamage : Float;
 	var accuracy : Int;
 	var critChance : Int;
 	var glancingChace : Int;

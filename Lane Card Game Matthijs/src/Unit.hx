@@ -20,10 +20,10 @@ import openfl.Assets;
 class Unit extends Sprite
 {
 	// initialize variables for this unit
-	public var health:Int;
+	public var health:Float;
 	public var armor:Int;
-	var softDamage:Int;
-	var apDamage:Int;
+	var softDamage:Float;
+	var apDamage:Float;
 	var accuracy:Int;
 	var critChance:Int;
 	var glancingChance:Int;
@@ -84,7 +84,7 @@ class Unit extends Sprite
 	var unitTilesheet:Tilesheet;
 		
 	//assign values to the variables for specific unit
-	public function new(parentSquad:Squad, hp:Int, dmg:Int, player:Int, stats:UnitStats, graphicData:VisualData, soundReference:Sound) 
+	public function new(parentSquad:Squad,player:Int, stats:UnitStats, graphicData:VisualData, soundReference:Sound) 
 	{
 		super();
 		health = stats.health;
