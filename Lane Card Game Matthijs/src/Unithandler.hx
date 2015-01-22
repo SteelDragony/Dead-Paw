@@ -22,10 +22,12 @@ class Unithandler extends Sprite
 	//class scope arrays for holding the squads 1 = left side, 2 = right side
 	var squads1 = new Array<Squad>();
 	var squads2 = new Array<Squad>();
+	var game:Game;
 	
-	public function new() 
+	public function new(currentGame:Game) 
 	{
 		super();
+		game = currentGame;
 		// use event listener to avoid errors using stage in initialisation
 		addEventListener(Event.ADDED_TO_STAGE, added);
 	}
@@ -48,6 +50,8 @@ class Unithandler extends Sprite
 		{
 			squad.update();
 		}
+		
+		
 		for (squad in squads2) 
 		{
 			squad.update();
@@ -100,6 +104,14 @@ class Unithandler extends Sprite
 						}
 					}
 				}
+				if ( targetInRange == false)
+				{
+					if ( unit1.x + unit1.range > stage.stageWidth)
+					{
+						unit1.attackBase(game);
+						targetInRange = true;
+					}
+				}
 			if (targetsInRange.length > 0)
 			{
 				//unit1.attack(targetsInRange[Std.random(targetsInRange.length)]);
@@ -113,6 +125,7 @@ class Unithandler extends Sprite
 				});
 				unit1.attack(targetsInRange);
 			}
+			
 			// none of the targets where in range so start moving again
 			if (targetInRange == false)
 				{

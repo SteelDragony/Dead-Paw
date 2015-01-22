@@ -211,7 +211,42 @@ class Unit extends Sprite
 			}
 		}
 	}
-
+	public function attackBase(currentGame:Game)
+	{
+		attacking = true;
+		if (this.side == 1)
+		{
+			if (burst == true && cooldownTimer <= 0)
+			{
+				if ( -cooldownTimer > cooldown) currentshot = 1;
+				if (burstSize > currentshot)
+				{
+					currentshot ++;
+					currentGame.player2hp -= this.softDamage;
+					animState = STATE_SHOOTING;
+					cooldownTimer = burstRate;
+				}
+				else 
+				{
+					currentshot = 1;
+					currentGame.player2hp -= this.softDamage;
+					animState = STATE_SHOOTING;
+					cooldownTimer = cooldown;
+				}
+			}
+			else if (cooldownTimer <= 0)
+			{
+				currentGame.player2hp -= this.softDamage;
+				animState = STATE_SHOOTING;
+				cooldownTimer = cooldown;
+			}
+	}
+		if (this.side == 2)
+		{
+			currentGame.player1hp - this.softDamage;
+		}
+	}
+	
 	function fireShot(target:Unit, setCooldown:Int)
 	{
 		if (Std.random(101) > accuracy)

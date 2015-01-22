@@ -23,8 +23,8 @@ class Game extends Sprite
 	var units2 = new Array<Unit>();
 	
 	//variables to store the health of the player
-	var player1hp:Int;
-	var player2hp:Int;
+	public var player1hp:Int;
+	public var player2hp:Int;
 	
 	// declare Class scope variables
 	var hand1:Hand;
@@ -71,7 +71,7 @@ function resize(e)
 		
 		// (your code here)
 		
-		unithandler = new Unithandler();
+		unithandler = new Unithandler(this);
 		addChild(unithandler);
 		userinterface = new Userinterface();
 		addChild(userinterface);
@@ -100,6 +100,8 @@ function resize(e)
 		hand2 = new Hand( this, 2 );
 		addChild(hand1);
 		addChild(hand2);
+		hand1.addCard("YPR", sound); 
+		hand1.addCard("YPR", sound);
 		hand1.addCard("YPR", sound);
 		hand1.addCard("BearRifle", sound);
 		hand1.addCard("BearAt", sound);
@@ -200,27 +202,29 @@ function resize(e)
 			{
 				spawnUnitOnDrag(card.unitStats, card.unitGraphics, card.side, lane);
 				addChild(card);
+				hand1.handArray.remove(card);
 				removeChild(card);
+				stage.removeEventListener(MouseEvent.MOUSE_UP, card.stopdragging);
 				if (card.unitGraphics.spriteSheet == "img/YPR.png")
 				{
 					if (card.side == 1)
 					{
-						// hand1.addCard("YPR", sound);
+						//hand1.addCard("YPR", sound);
 					}
 					if (card.side == 2)
 					{
-						// hand2.addCard("YPR", sound);
+						//hand2.addCard("YPR", sound);
 					}
 				}
 				else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
 				{
 					if (card.side == 1)
 					{
-						// hand1.addCard("BearRifle", sound);
+						hand1.addCard("BearRifle", sound);
 					}
 					if (card.side == 2)
 					{
-						// hand2.addCard("BearRifle", sound);
+						hand2.addCard("BearRifle", sound);
 					}
 				}
 				sound.playSound("click");
