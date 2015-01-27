@@ -35,6 +35,14 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/BearHAT.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/BearLMG.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/Cat_Sprint.png");
 		types.push (AssetType.IMAGE);
 		
@@ -71,6 +79,10 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/PT76.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/Right UI.png");
 		types.push (AssetType.IMAGE);
 		
@@ -92,6 +104,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("img/YPR.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/YPRPRAT.png");
 		types.push (AssetType.IMAGE);
 		
 		
@@ -363,11 +379,11 @@ class ApplicationMain {
 		types.push (AssetType.TEXT);
 		
 		
-		urls.push ("Coder's Crux Regular");
+		urls.push ("font/Coderscrux.ttf");
 		types.push (AssetType.FONT);
 		
 		
-		urls.push ("Colleged");
+		urls.push ("font/Colleged.ttf");
 		types.push (AssetType.FONT);
 		
 		
@@ -388,7 +404,7 @@ class ApplicationMain {
 		
 		var loaded = 0;
 		var total = 0;
-		var library_onLoad = function (__) {
+		var library_onLoad = function (_) {
 			
 			loaded++;
 			
@@ -399,8 +415,6 @@ class ApplicationMain {
 			}
 			
 		}
-		
-		preloader = null;
 		
 		
 		
@@ -434,7 +448,7 @@ class ApplicationMain {
 		}
 		
 		#if js
-		#if (munit || utest)
+		#if munit
 		flash.Lib.embed (null, 1280, 800, "000000");
 		#end
 		#else
@@ -470,11 +484,11 @@ class ApplicationMain {
 			
 			var instance:DocumentClass = Type.createInstance (DocumentClass, []);
 			
-			/*if (Std.is (instance, openfl.display.DisplayObject)) {
+			if (Std.is (instance, openfl.display.DisplayObject)) {
 				
 				openfl.Lib.current.addChild (cast instance);
 				
-			}*/
+			}
 			
 		}
 		
@@ -498,7 +512,8 @@ class ApplicationMain {
 }
 
 
-@:build(DocumentClass.build())
+#if flash @:build(DocumentClass.buildFlash())
+#else @:build(DocumentClass.build()) #end
 @:keep class DocumentClass extends Main {}
 
 
@@ -525,7 +540,7 @@ class DocumentClass {
 				
 				var method = macro {
 					
-					openfl.Lib.current.addChild (this);
+					this.stage = flash.Lib.current.stage;
 					super ();
 					dispatchEvent (new openfl.events.Event (openfl.events.Event.ADDED_TO_STAGE, false, false));
 					
@@ -533,6 +548,34 @@ class DocumentClass {
 				
 				fields.push ({ name: "new", access: [ APublic ], kind: FFun({ args: [], expr: method, params: [], ret: macro :Void }), pos: Context.currentPos () });
 				
+				return fields;
+				
+			}
+			
+			searchTypes = searchTypes.superClass.t.get ();
+			
+		}
+		
+		return null;
+		
+	}
+	
+	
+	macro public static function buildFlash ():Array<Field> {
+		
+		var classType = Context.getLocalClass ().get ();
+		var searchTypes = classType;
+		
+		while (searchTypes.superClass != null) {
+			
+			if (searchTypes.pack.length == 2 && searchTypes.pack[1] == "display" && searchTypes.name == "DisplayObject") {
+				
+				var fields = Context.getBuildFields ();
+				var method = macro {
+					return flash.Lib.current.stage;
+				}
+				
+				fields.push ({ name: "get_stage", access: [ APrivate ], meta: [ { name: ":getter", params: [ macro stage ], pos: Context.currentPos() } ], kind: FFun({ args: [], expr: method, params: [], ret: macro :flash.display.Stage }), pos: Context.currentPos() });
 				return fields;
 				
 			}

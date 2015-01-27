@@ -12,11 +12,12 @@ import flash.system.System;
 class Menu extends openfl.display.Sprite
 {
 
-
-
-var startbutton:Menubutton = new Menubutton("img/MenuButtonStart.png", "img/MenuButtonStartHover.png");
-var exitbutton:Menubutton = new Menubutton("img/MenuButtonExit.png", "img/MenuButtonExitHover.png");
-public var start:Bool = false;
+	var musicvolume:Float = 1.0 ;
+	var menuMusic = new Music();
+			
+	var startbutton:Menubutton = new Menubutton("img/MenuButtonStart.png", "img/MenuButtonStartHover.png");
+	var exitbutton:Menubutton = new Menubutton("img/MenuButtonExit.png", "img/MenuButtonExitHover.png");
+	public var start:Bool = false;
 
 	public function new() 
 	{
@@ -31,6 +32,7 @@ public var start:Bool = false;
 		
 		drawbackground();
 		drawmenu();
+		playMusic();
 		
 	}
 	
@@ -54,6 +56,8 @@ public var start:Bool = false;
 		//startbutton.removeEventListener(MouseEvent.CLICK, startGame);
 		//exitbutton.removeEventListener(MouseEvent.CLICK, exit);
 		start = true;
+		menuMusic.stopMusic ();
+		removeChild (menuMusic);
 	}
 
 	function exit(e:MouseEvent) 
@@ -68,6 +72,9 @@ public var start:Bool = false;
 		
 	}
 
-
-
+	function playMusic ()
+	{
+		addChild(menuMusic);
+		menuMusic.mainMenuMusic (musicvolume) ;
+	}
 }

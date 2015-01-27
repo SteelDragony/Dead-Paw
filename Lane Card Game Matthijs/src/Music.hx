@@ -13,7 +13,7 @@ import openfl.Assets.loadSound;
 
 /**
  * ...
- * @author Andor
+ * @author Andor Reineking
  */
 class Music extends Sprite 
 {
@@ -29,6 +29,11 @@ class Music extends Sprite
 	{
 		super();
 		
+	}
+	
+	public function stopMusic ()
+	{
+		soundChannel.soundTransform = new SoundTransform (0);
 	}
 	
 	public function gameMusic (input:Float)

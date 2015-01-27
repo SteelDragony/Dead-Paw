@@ -12,7 +12,7 @@ import openfl.Assets.loadSound;
 
 /**
  * ...
- * @author Andor
+ * @author Andor Reineking
  */
 class Sound extends Sprite 
 {
@@ -49,7 +49,6 @@ class Sound extends Sprite
 	var g363 = Assets.getSound("audio/G36_3.wav");
 	var grenade = Assets.getSound("audio/Grenade_1.wav");
 	var grenadeLauncher = Assets.getSound("audio/Grenade_launcher_1.wav");
-	var radio1 = Assets.getSound("audio/Radio_1.wav");
 	var smg1 = Assets.getSound("audio/SMG_1.wav");
 	var smg2 = Assets.getSound("audio/SMG_2.wav");
 	var smg3 = Assets.getSound("audio/SMG_3.wav");
@@ -95,8 +94,6 @@ class Sound extends Sprite
 			channel = grenade.play( 0, 0, new SoundTransform(soundVolume ) );
 			case "grenadeLauncher" :
 			channel = grenadeLauncher.play( 0, 0, new SoundTransform(soundVolume ) );
-			case "radio" :
-			channel = radio1.play( 0, 0, new SoundTransform(soundVolume ) );
 			case "smg" :
 			soundSMG (soundVolume) ;
 			case "sniper" :

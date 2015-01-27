@@ -44,8 +44,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("img/Background.png", __ASSET__img_background_png);
+		type.set ("img/Background.png", AssetType.IMAGE);
 		className.set ("img/BearAt.png", __ASSET__img_bearat_png);
 		type.set ("img/BearAt.png", AssetType.IMAGE);
+		className.set ("img/BearHAT.png", __ASSET__img_bearhat_png);
+		type.set ("img/BearHAT.png", AssetType.IMAGE);
+		className.set ("img/BearLMG.png", __ASSET__img_bearlmg_png);
+		type.set ("img/BearLMG.png", AssetType.IMAGE);
 		className.set ("img/Cat_Sprint.png", __ASSET__img_cat_sprint_png);
 		type.set ("img/Cat_Sprint.png", AssetType.IMAGE);
 		className.set ("img/East Card Back.png", __ASSET__img_east_card_back_png);
@@ -54,8 +60,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/East Card Front.png", AssetType.IMAGE);
 		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
 		type.set ("img/Left UI.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonExit.png", __ASSET__img_menubuttonexit_png);
+		type.set ("img/MenuButtonExit.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonExitHover.png", __ASSET__img_menubuttonexithover_png);
+		type.set ("img/MenuButtonExitHover.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonStart.png", __ASSET__img_menubuttonstart_png);
+		type.set ("img/MenuButtonStart.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonStartHover.png", __ASSET__img_menubuttonstarthover_png);
+		type.set ("img/MenuButtonStartHover.png", AssetType.IMAGE);
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		className.set ("img/PT76.png", __ASSET__img_pt76_png);
+		type.set ("img/PT76.png", AssetType.IMAGE);
 		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
 		type.set ("img/Right UI.png", AssetType.IMAGE);
 		className.set ("img/RuBearRifle.png", __ASSET__img_rubearrifle_png);
@@ -68,14 +84,48 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/West Card Front.png", AssetType.IMAGE);
 		className.set ("img/YPR.png", __ASSET__img_ypr_png);
 		type.set ("img/YPR.png", AssetType.IMAGE);
+		className.set ("img/YPRPRAT.png", __ASSET__img_yprprat_png);
+		type.set ("img/YPRPRAT.png", AssetType.IMAGE);
+		className.set ("audio/AK_1.wav", __ASSET__audio_ak_1_wav);
+		type.set ("audio/AK_1.wav", AssetType.SOUND);
+		className.set ("audio/AK_2.wav", __ASSET__audio_ak_2_wav);
+		type.set ("audio/AK_2.wav", AssetType.SOUND);
+		className.set ("audio/AK_3.wav", __ASSET__audio_ak_3_wav);
+		type.set ("audio/AK_3.wav", AssetType.SOUND);
+		className.set ("audio/AK_4.wav", __ASSET__audio_ak_4_wav);
+		type.set ("audio/AK_4.wav", AssetType.SOUND);
 		className.set ("audio/Amb_1.mp3", __ASSET__audio_amb_1_mp3);
 		type.set ("audio/Amb_1.mp3", AssetType.MUSIC);
+		className.set ("audio/Armor_Hit1.wav", __ASSET__audio_armor_hit1_wav);
+		type.set ("audio/Armor_Hit1.wav", AssetType.SOUND);
+		className.set ("audio/Armor_Hit2.wav", __ASSET__audio_armor_hit2_wav);
+		type.set ("audio/Armor_Hit2.wav", AssetType.SOUND);
+		className.set ("audio/Armor_Hit3.wav", __ASSET__audio_armor_hit3_wav);
+		type.set ("audio/Armor_Hit3.wav", AssetType.SOUND);
+		className.set ("audio/Arty_1.wav", __ASSET__audio_arty_1_wav);
+		type.set ("audio/Arty_1.wav", AssetType.SOUND);
+		className.set ("audio/Arty_2.wav", __ASSET__audio_arty_2_wav);
+		type.set ("audio/Arty_2.wav", AssetType.SOUND);
+		className.set ("audio/Arty_3.wav", __ASSET__audio_arty_3_wav);
+		type.set ("audio/Arty_3.wav", AssetType.SOUND);
+		className.set ("audio/Arty_4.wav", __ASSET__audio_arty_4_wav);
+		type.set ("audio/Arty_4.wav", AssetType.SOUND);
+		className.set ("audio/Arty_5.wav", __ASSET__audio_arty_5_wav);
+		type.set ("audio/Arty_5.wav", AssetType.SOUND);
 		className.set ("audio/AT4_1.wav", __ASSET__audio_at4_1_wav);
 		type.set ("audio/AT4_1.wav", AssetType.SOUND);
 		className.set ("audio/AT4_2.wav", __ASSET__audio_at4_2_wav);
 		type.set ("audio/AT4_2.wav", AssetType.SOUND);
 		className.set ("audio/AT4_3.wav", __ASSET__audio_at4_3_wav);
 		type.set ("audio/AT4_3.wav", AssetType.SOUND);
+		className.set ("audio/ATGM_1.wav", __ASSET__audio_atgm_1_wav);
+		type.set ("audio/ATGM_1.wav", AssetType.SOUND);
+		className.set ("audio/ATGM_2.wav", __ASSET__audio_atgm_2_wav);
+		type.set ("audio/ATGM_2.wav", AssetType.SOUND);
+		className.set ("audio/ATGM_3.wav", __ASSET__audio_atgm_3_wav);
+		type.set ("audio/ATGM_3.wav", AssetType.SOUND);
+		className.set ("audio/ATGM_4.wav", __ASSET__audio_atgm_4_wav);
+		type.set ("audio/ATGM_4.wav", AssetType.SOUND);
 		className.set ("audio/Autocannon_1.wav", __ASSET__audio_autocannon_1_wav);
 		type.set ("audio/Autocannon_1.wav", AssetType.SOUND);
 		className.set ("audio/Autocannon_2.wav", __ASSET__audio_autocannon_2_wav);
@@ -84,14 +134,74 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/Autocannon_3.wav", AssetType.SOUND);
 		className.set ("audio/Beep1.wav", __ASSET__audio_beep1_wav);
 		type.set ("audio/Beep1.wav", AssetType.SOUND);
+		className.set ("audio/Burst_mg3.wav", __ASSET__audio_burst_mg3_wav);
+		type.set ("audio/Burst_mg3.wav", AssetType.SOUND);
+		className.set ("audio/Burst_pkm.wav", __ASSET__audio_burst_pkm_wav);
+		type.set ("audio/Burst_pkm.wav", AssetType.SOUND);
+		className.set ("audio/Burst_rifle.wav", __ASSET__audio_burst_rifle_wav);
+		type.set ("audio/Burst_rifle.wav", AssetType.SOUND);
+		className.set ("audio/Burst_saw.wav", __ASSET__audio_burst_saw_wav);
+		type.set ("audio/Burst_saw.wav", AssetType.SOUND);
+		className.set ("audio/Click1.wav", __ASSET__audio_click1_wav);
+		type.set ("audio/Click1.wav", AssetType.SOUND);
 		className.set ("audio/Click3.wav", __ASSET__audio_click3_wav);
 		type.set ("audio/Click3.wav", AssetType.SOUND);
+		className.set ("audio/expl_1.wav", __ASSET__audio_expl_1_wav);
+		type.set ("audio/expl_1.wav", AssetType.SOUND);
+		className.set ("audio/expl_2.wav", __ASSET__audio_expl_2_wav);
+		type.set ("audio/expl_2.wav", AssetType.SOUND);
+		className.set ("audio/expl_3.wav", __ASSET__audio_expl_3_wav);
+		type.set ("audio/expl_3.wav", AssetType.SOUND);
+		className.set ("audio/expl_4.wav", __ASSET__audio_expl_4_wav);
+		type.set ("audio/expl_4.wav", AssetType.SOUND);
+		className.set ("audio/expl_5.wav", __ASSET__audio_expl_5_wav);
+		type.set ("audio/expl_5.wav", AssetType.SOUND);
+		className.set ("audio/G36_1.wav", __ASSET__audio_g36_1_wav);
+		type.set ("audio/G36_1.wav", AssetType.SOUND);
+		className.set ("audio/G36_2.wav", __ASSET__audio_g36_2_wav);
+		type.set ("audio/G36_2.wav", AssetType.SOUND);
+		className.set ("audio/G36_3.wav", __ASSET__audio_g36_3_wav);
+		type.set ("audio/G36_3.wav", AssetType.SOUND);
+		className.set ("audio/Grenade_1.wav", __ASSET__audio_grenade_1_wav);
+		type.set ("audio/Grenade_1.wav", AssetType.SOUND);
+		className.set ("audio/Grenade_launcher_1.wav", __ASSET__audio_grenade_launcher_1_wav);
+		type.set ("audio/Grenade_launcher_1.wav", AssetType.SOUND);
 		className.set ("audio/music/GameBGM1.wav", __ASSET__audio_music_gamebgm1_wav);
 		type.set ("audio/music/GameBGM1.wav", AssetType.SOUND);
 		className.set ("audio/music/GameWin.wav", __ASSET__audio_music_gamewin_wav);
 		type.set ("audio/music/GameWin.wav", AssetType.SOUND);
 		className.set ("audio/music/Maintheme.mp3", __ASSET__audio_music_maintheme_mp3);
 		type.set ("audio/music/Maintheme.mp3", AssetType.MUSIC);
+		className.set ("audio/Radio_1.WAV", __ASSET__audio_radio_1_wav);
+		type.set ("audio/Radio_1.WAV", AssetType.SOUND);
+		className.set ("audio/Rifle_fire1.wav", __ASSET__audio_rifle_fire1_wav);
+		type.set ("audio/Rifle_fire1.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_1.wav", __ASSET__audio_rifle_hit_1_wav);
+		type.set ("audio/Rifle_hit_1.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_2.wav", __ASSET__audio_rifle_hit_2_wav);
+		type.set ("audio/Rifle_hit_2.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_3.wav", __ASSET__audio_rifle_hit_3_wav);
+		type.set ("audio/Rifle_hit_3.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_4.wav", __ASSET__audio_rifle_hit_4_wav);
+		type.set ("audio/Rifle_hit_4.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_5.wav", __ASSET__audio_rifle_hit_5_wav);
+		type.set ("audio/Rifle_hit_5.wav", AssetType.SOUND);
+		className.set ("audio/Rifle_hit_6.wav", __ASSET__audio_rifle_hit_6_wav);
+		type.set ("audio/Rifle_hit_6.wav", AssetType.SOUND);
+		className.set ("audio/RPG7_1.wav", __ASSET__audio_rpg7_1_wav);
+		type.set ("audio/RPG7_1.wav", AssetType.SOUND);
+		className.set ("audio/RPG7_2.wav", __ASSET__audio_rpg7_2_wav);
+		type.set ("audio/RPG7_2.wav", AssetType.SOUND);
+		className.set ("audio/SMG_1.wav", __ASSET__audio_smg_1_wav);
+		type.set ("audio/SMG_1.wav", AssetType.SOUND);
+		className.set ("audio/SMG_2.wav", __ASSET__audio_smg_2_wav);
+		type.set ("audio/SMG_2.wav", AssetType.SOUND);
+		className.set ("audio/SMG_3.wav", __ASSET__audio_smg_3_wav);
+		type.set ("audio/SMG_3.wav", AssetType.SOUND);
+		className.set ("audio/Sniper_1.wav", __ASSET__audio_sniper_1_wav);
+		type.set ("audio/Sniper_1.wav", AssetType.SOUND);
+		className.set ("audio/Sniper_2.wav", __ASSET__audio_sniper_2_wav);
+		type.set ("audio/Sniper_2.wav", AssetType.SOUND);
 		className.set ("audio/Tank_fire_1.wav", __ASSET__audio_tank_fire_1_wav);
 		type.set ("audio/Tank_fire_1.wav", AssetType.SOUND);
 		className.set ("audio/Tank_fire_2.wav", __ASSET__audio_tank_fire_2_wav);
@@ -102,6 +212,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/Tank_fire_4.wav", AssetType.SOUND);
 		className.set ("audio/Tank_fire_5.wav", __ASSET__audio_tank_fire_5_wav);
 		type.set ("audio/Tank_fire_5.wav", AssetType.SOUND);
+		className.set ("audio/Tank_ground_hit1.wav", __ASSET__audio_tank_ground_hit1_wav);
+		type.set ("audio/Tank_ground_hit1.wav", AssetType.SOUND);
+		className.set ("audio/Tank_ground_hit2.wav", __ASSET__audio_tank_ground_hit2_wav);
+		type.set ("audio/Tank_ground_hit2.wav", AssetType.SOUND);
+		className.set ("audio/Tank_ground_hit3.wav", __ASSET__audio_tank_ground_hit3_wav);
+		type.set ("audio/Tank_ground_hit3.wav", AssetType.SOUND);
 		className.set ("units/units.json", __ASSET__units_units_json);
 		type.set ("units/units.json", AssetType.TEXT);
 		className.set ("font/Coderscrux.ttf", __ASSET__font_coderscrux_ttf);
@@ -113,7 +229,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "img/Background.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "img/BearAt.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/BearHAT.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/BearLMG.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -133,7 +261,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonExit.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonExitHover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonStart.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonStartHover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "img/Mid UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/PT76.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -161,10 +309,62 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "img/YPRPRAT.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "audio/AK_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/AK_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/AK_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/AK_4.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "audio/Amb_1.mp3";
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "audio/Armor_Hit1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Armor_Hit2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Armor_Hit3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Arty_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Arty_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Arty_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Arty_4.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Arty_5.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "audio/AT4_1.wav";
 		path.set (id, id);
 		
@@ -174,6 +374,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.SOUND);
 		id = "audio/AT4_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ATGM_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ATGM_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ATGM_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/ATGM_4.wav";
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
@@ -193,7 +409,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
+		id = "audio/Burst_mg3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Burst_pkm.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Burst_rifle.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Burst_saw.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Click1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "audio/Click3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/expl_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/expl_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/expl_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/expl_4.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/expl_5.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/G36_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/G36_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/G36_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Grenade_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Grenade_launcher_1.wav";
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
@@ -209,6 +485,66 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "audio/Radio_1.WAV";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_fire1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_4.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_5.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Rifle_hit_6.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/RPG7_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/RPG7_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/SMG_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/SMG_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/SMG_3.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Sniper_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Sniper_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "audio/Tank_fire_1.wav";
 		path.set (id, id);
 		
@@ -226,6 +562,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.SOUND);
 		id = "audio/Tank_fire_5.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Tank_ground_hit1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Tank_ground_hit2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Tank_ground_hit3.wav";
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
@@ -277,6 +625,64 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__font_coderscrux_ttf);
 		openfl.text.Font.registerFont (__ASSET__font_colleged_ttf);
 		
@@ -284,10 +690,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if (windows || mac || linux)
 		
-		var useManifest = false;
+		/*var useManifest = false;
+		
+		className.set ("img/Background.png", __ASSET__img_background_png);
+		type.set ("img/Background.png", AssetType.IMAGE);
 		
 		className.set ("img/BearAt.png", __ASSET__img_bearat_png);
 		type.set ("img/BearAt.png", AssetType.IMAGE);
+		
+		className.set ("img/BearHAT.png", __ASSET__img_bearhat_png);
+		type.set ("img/BearHAT.png", AssetType.IMAGE);
+		
+		className.set ("img/BearLMG.png", __ASSET__img_bearlmg_png);
+		type.set ("img/BearLMG.png", AssetType.IMAGE);
 		
 		className.set ("img/Cat_Sprint.png", __ASSET__img_cat_sprint_png);
 		type.set ("img/Cat_Sprint.png", AssetType.IMAGE);
@@ -301,8 +716,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
 		type.set ("img/Left UI.png", AssetType.IMAGE);
 		
+		className.set ("img/MenuButtonExit.png", __ASSET__img_menubuttonexit_png);
+		type.set ("img/MenuButtonExit.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonExitHover.png", __ASSET__img_menubuttonexithover_png);
+		type.set ("img/MenuButtonExitHover.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonStart.png", __ASSET__img_menubuttonstart_png);
+		type.set ("img/MenuButtonStart.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonStartHover.png", __ASSET__img_menubuttonstarthover_png);
+		type.set ("img/MenuButtonStartHover.png", AssetType.IMAGE);
+		
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		
+		className.set ("img/PT76.png", __ASSET__img_pt76_png);
+		type.set ("img/PT76.png", AssetType.IMAGE);
 		
 		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
 		type.set ("img/Right UI.png", AssetType.IMAGE);
@@ -322,8 +752,47 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("img/YPR.png", __ASSET__img_ypr_png);
 		type.set ("img/YPR.png", AssetType.IMAGE);
 		
+		className.set ("img/YPRPRAT.png", __ASSET__img_yprprat_png);
+		type.set ("img/YPRPRAT.png", AssetType.IMAGE);
+		
+		className.set ("audio/AK_1.wav", __ASSET__audio_ak_1_wav);
+		type.set ("audio/AK_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/AK_2.wav", __ASSET__audio_ak_2_wav);
+		type.set ("audio/AK_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/AK_3.wav", __ASSET__audio_ak_3_wav);
+		type.set ("audio/AK_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/AK_4.wav", __ASSET__audio_ak_4_wav);
+		type.set ("audio/AK_4.wav", AssetType.SOUND);
+		
 		className.set ("audio/Amb_1.mp3", __ASSET__audio_amb_1_mp3);
 		type.set ("audio/Amb_1.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Armor_Hit1.wav", __ASSET__audio_armor_hit1_wav);
+		type.set ("audio/Armor_Hit1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Armor_Hit2.wav", __ASSET__audio_armor_hit2_wav);
+		type.set ("audio/Armor_Hit2.wav", AssetType.SOUND);
+		
+		className.set ("audio/Armor_Hit3.wav", __ASSET__audio_armor_hit3_wav);
+		type.set ("audio/Armor_Hit3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Arty_1.wav", __ASSET__audio_arty_1_wav);
+		type.set ("audio/Arty_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Arty_2.wav", __ASSET__audio_arty_2_wav);
+		type.set ("audio/Arty_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/Arty_3.wav", __ASSET__audio_arty_3_wav);
+		type.set ("audio/Arty_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Arty_4.wav", __ASSET__audio_arty_4_wav);
+		type.set ("audio/Arty_4.wav", AssetType.SOUND);
+		
+		className.set ("audio/Arty_5.wav", __ASSET__audio_arty_5_wav);
+		type.set ("audio/Arty_5.wav", AssetType.SOUND);
 		
 		className.set ("audio/AT4_1.wav", __ASSET__audio_at4_1_wav);
 		type.set ("audio/AT4_1.wav", AssetType.SOUND);
@@ -333,6 +802,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("audio/AT4_3.wav", __ASSET__audio_at4_3_wav);
 		type.set ("audio/AT4_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/ATGM_1.wav", __ASSET__audio_atgm_1_wav);
+		type.set ("audio/ATGM_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/ATGM_2.wav", __ASSET__audio_atgm_2_wav);
+		type.set ("audio/ATGM_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/ATGM_3.wav", __ASSET__audio_atgm_3_wav);
+		type.set ("audio/ATGM_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/ATGM_4.wav", __ASSET__audio_atgm_4_wav);
+		type.set ("audio/ATGM_4.wav", AssetType.SOUND);
 		
 		className.set ("audio/Autocannon_1.wav", __ASSET__audio_autocannon_1_wav);
 		type.set ("audio/Autocannon_1.wav", AssetType.SOUND);
@@ -346,8 +827,53 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("audio/Beep1.wav", __ASSET__audio_beep1_wav);
 		type.set ("audio/Beep1.wav", AssetType.SOUND);
 		
+		className.set ("audio/Burst_mg3.wav", __ASSET__audio_burst_mg3_wav);
+		type.set ("audio/Burst_mg3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Burst_pkm.wav", __ASSET__audio_burst_pkm_wav);
+		type.set ("audio/Burst_pkm.wav", AssetType.SOUND);
+		
+		className.set ("audio/Burst_rifle.wav", __ASSET__audio_burst_rifle_wav);
+		type.set ("audio/Burst_rifle.wav", AssetType.SOUND);
+		
+		className.set ("audio/Burst_saw.wav", __ASSET__audio_burst_saw_wav);
+		type.set ("audio/Burst_saw.wav", AssetType.SOUND);
+		
+		className.set ("audio/Click1.wav", __ASSET__audio_click1_wav);
+		type.set ("audio/Click1.wav", AssetType.SOUND);
+		
 		className.set ("audio/Click3.wav", __ASSET__audio_click3_wav);
 		type.set ("audio/Click3.wav", AssetType.SOUND);
+		
+		className.set ("audio/expl_1.wav", __ASSET__audio_expl_1_wav);
+		type.set ("audio/expl_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/expl_2.wav", __ASSET__audio_expl_2_wav);
+		type.set ("audio/expl_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/expl_3.wav", __ASSET__audio_expl_3_wav);
+		type.set ("audio/expl_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/expl_4.wav", __ASSET__audio_expl_4_wav);
+		type.set ("audio/expl_4.wav", AssetType.SOUND);
+		
+		className.set ("audio/expl_5.wav", __ASSET__audio_expl_5_wav);
+		type.set ("audio/expl_5.wav", AssetType.SOUND);
+		
+		className.set ("audio/G36_1.wav", __ASSET__audio_g36_1_wav);
+		type.set ("audio/G36_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/G36_2.wav", __ASSET__audio_g36_2_wav);
+		type.set ("audio/G36_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/G36_3.wav", __ASSET__audio_g36_3_wav);
+		type.set ("audio/G36_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Grenade_1.wav", __ASSET__audio_grenade_1_wav);
+		type.set ("audio/Grenade_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Grenade_launcher_1.wav", __ASSET__audio_grenade_launcher_1_wav);
+		type.set ("audio/Grenade_launcher_1.wav", AssetType.SOUND);
 		
 		className.set ("audio/music/GameBGM1.wav", __ASSET__audio_music_gamebgm1_wav);
 		type.set ("audio/music/GameBGM1.wav", AssetType.SOUND);
@@ -357,6 +883,51 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("audio/music/Maintheme.mp3", __ASSET__audio_music_maintheme_mp3);
 		type.set ("audio/music/Maintheme.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Radio_1.WAV", __ASSET__audio_radio_1_wav);
+		type.set ("audio/Radio_1.WAV", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_fire1.wav", __ASSET__audio_rifle_fire1_wav);
+		type.set ("audio/Rifle_fire1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_1.wav", __ASSET__audio_rifle_hit_1_wav);
+		type.set ("audio/Rifle_hit_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_2.wav", __ASSET__audio_rifle_hit_2_wav);
+		type.set ("audio/Rifle_hit_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_3.wav", __ASSET__audio_rifle_hit_3_wav);
+		type.set ("audio/Rifle_hit_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_4.wav", __ASSET__audio_rifle_hit_4_wav);
+		type.set ("audio/Rifle_hit_4.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_5.wav", __ASSET__audio_rifle_hit_5_wav);
+		type.set ("audio/Rifle_hit_5.wav", AssetType.SOUND);
+		
+		className.set ("audio/Rifle_hit_6.wav", __ASSET__audio_rifle_hit_6_wav);
+		type.set ("audio/Rifle_hit_6.wav", AssetType.SOUND);
+		
+		className.set ("audio/RPG7_1.wav", __ASSET__audio_rpg7_1_wav);
+		type.set ("audio/RPG7_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/RPG7_2.wav", __ASSET__audio_rpg7_2_wav);
+		type.set ("audio/RPG7_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/SMG_1.wav", __ASSET__audio_smg_1_wav);
+		type.set ("audio/SMG_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/SMG_2.wav", __ASSET__audio_smg_2_wav);
+		type.set ("audio/SMG_2.wav", AssetType.SOUND);
+		
+		className.set ("audio/SMG_3.wav", __ASSET__audio_smg_3_wav);
+		type.set ("audio/SMG_3.wav", AssetType.SOUND);
+		
+		className.set ("audio/Sniper_1.wav", __ASSET__audio_sniper_1_wav);
+		type.set ("audio/Sniper_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Sniper_2.wav", __ASSET__audio_sniper_2_wav);
+		type.set ("audio/Sniper_2.wav", AssetType.SOUND);
 		
 		className.set ("audio/Tank_fire_1.wav", __ASSET__audio_tank_fire_1_wav);
 		type.set ("audio/Tank_fire_1.wav", AssetType.SOUND);
@@ -373,6 +944,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("audio/Tank_fire_5.wav", __ASSET__audio_tank_fire_5_wav);
 		type.set ("audio/Tank_fire_5.wav", AssetType.SOUND);
 		
+		className.set ("audio/Tank_ground_hit1.wav", __ASSET__audio_tank_ground_hit1_wav);
+		type.set ("audio/Tank_ground_hit1.wav", AssetType.SOUND);
+		
+		className.set ("audio/Tank_ground_hit2.wav", __ASSET__audio_tank_ground_hit2_wav);
+		type.set ("audio/Tank_ground_hit2.wav", AssetType.SOUND);
+		
+		className.set ("audio/Tank_ground_hit3.wav", __ASSET__audio_tank_ground_hit3_wav);
+		type.set ("audio/Tank_ground_hit3.wav", AssetType.SOUND);
+		
 		className.set ("units/units.json", __ASSET__units_units_json);
 		type.set ("units/units.json", AssetType.TEXT);
 		
@@ -381,7 +961,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/Colleged.ttf", __ASSET__font_colleged_ttf);
 		type.set ("font/Colleged.ttf", AssetType.FONT);
-		
+		*/
+		var useManifest = true;
 		
 		if (useManifest) {
 			
@@ -530,8 +1111,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#else
 		
-		if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
-		else return ByteArray.readFile (path.get (id));
+		//return null;
+		//if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
+		//else 
+		return ByteArray.readFile (path.get (id));
 		
 		#end
 		
@@ -825,8 +1408,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 			var bytes = ByteArray.readFile ("../res/manifest");
 			#elseif emscripten
 			var bytes = ByteArray.readFile ("assets/manifest");
-			#elseif (mac && java)
-			var bytes = ByteArray.readFile ("../Resources/manifest");
 			#else
 			var bytes = ByteArray.readFile ("manifest");
 			#end
@@ -952,35 +1533,93 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__img_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_bearat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_bearhat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_bearlmg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_cat_sprint_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_east_card_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_east_card_front_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_left_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonexit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonexithover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonstart_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonstarthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_mid_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_pt76_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_right_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_rubearrifle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_top_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_west_card_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_west_card_front_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_ypr_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_yprprat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__audio_ak_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ak_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ak_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_ak_4_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_amb_1_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_armor_hit1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_armor_hit2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_armor_hit3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_arty_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_arty_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_arty_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_arty_4_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_arty_5_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_at4_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_at4_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_at4_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_atgm_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_atgm_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_atgm_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_atgm_4_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_autocannon_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_autocannon_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_autocannon_3_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_beep1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_burst_mg3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_burst_pkm_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_burst_rifle_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_burst_saw_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_click1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_click3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_expl_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_expl_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_expl_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_expl_4_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_expl_5_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_g36_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_g36_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_g36_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_grenade_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_grenade_launcher_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_music_gamebgm1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_music_gamewin_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_music_maintheme_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_radio_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_fire1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_4_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_5_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_6_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rpg7_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rpg7_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_smg_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_smg_2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_smg_3_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_sniper_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_sniper_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_3_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_4_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_tank_fire_5_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_tank_ground_hit1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_tank_ground_hit2_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_tank_ground_hit3_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__units_units_json extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__font_coderscrux_ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__font_colleged_ttf extends flash.text.Font { }
@@ -1019,56 +1658,172 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-@:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "Coder's Crux Regular"; } } 
-@:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "Colleged"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Coderscrux.ttf"; } } 
+@:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Colleged.ttf"; } } 
 
 #end
 
 #else
 
 #if openfl
-@:keep class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Coderscrux.ttf"; fontName = "Coder's Crux Regular"; }}
-@:keep class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Colleged.ttf"; fontName = "Colleged"; }}
+class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Coderscrux.ttf"; fontName = "Coder's Crux Regular"; }}
+class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Colleged.ttf"; fontName = "Colleged"; }}
 
 #end
 
 #if (windows || mac || linux)
 
-
-@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends lime.graphics.Image {}
-@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends lime.graphics.Image {}
-@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends lime.graphics.Image {}
-@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends lime.graphics.Image {}
-@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends lime.graphics.Image {}
-@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends lime.graphics.Image {}
-@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends lime.graphics.Image {}
-@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends lime.graphics.Image {}
-@:bitmap("assets/img/Top UI.png") class __ASSET__img_top_ui_png extends lime.graphics.Image {}
-@:bitmap("assets/img/West Card Back.png") class __ASSET__img_west_card_back_png extends lime.graphics.Image {}
-@:bitmap("assets/img/West Card Front.png") class __ASSET__img_west_card_front_png extends lime.graphics.Image {}
-@:bitmap("assets/img/YPR.png") class __ASSET__img_ypr_png extends lime.graphics.Image {}
-@:sound("assets/audio/Amb_1.mp3") class __ASSET__audio_amb_1_mp3 extends lime.audio.AudioSource {}
-@:sound("assets/audio/AT4_1.wav") class __ASSET__audio_at4_1_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/AT4_2.wav") class __ASSET__audio_at4_2_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/AT4_3.wav") class __ASSET__audio_at4_3_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Autocannon_1.wav") class __ASSET__audio_autocannon_1_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Autocannon_2.wav") class __ASSET__audio_autocannon_2_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Autocannon_3.wav") class __ASSET__audio_autocannon_3_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Beep1.wav") class __ASSET__audio_beep1_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Click3.wav") class __ASSET__audio_click3_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/music/GameBGM1.wav") class __ASSET__audio_music_gamebgm1_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/music/GameWin.wav") class __ASSET__audio_music_gamewin_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/music/Maintheme.mp3") class __ASSET__audio_music_maintheme_mp3 extends lime.audio.AudioSource {}
-@:sound("assets/audio/Tank_fire_1.wav") class __ASSET__audio_tank_fire_1_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Tank_fire_2.wav") class __ASSET__audio_tank_fire_2_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Tank_fire_3.wav") class __ASSET__audio_tank_fire_3_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Tank_fire_4.wav") class __ASSET__audio_tank_fire_4_wav extends lime.audio.AudioSource {}
-@:sound("assets/audio/Tank_fire_5.wav") class __ASSET__audio_tank_fire_5_wav extends lime.audio.AudioSource {}
-@:file("assets/units/units.json") class __ASSET__units_units_json extends lime.utils.ByteArray {}
-@:font("assets/font/Coderscrux.ttf") class __ASSET__font_coderscrux_ttf extends lime.graphics.Font {}
-@:font("assets/font/Colleged.ttf") class __ASSET__font_colleged_ttf extends lime.graphics.Font {}
-
-
+//
+//@:bitmap("assets/img/Background.png") class __ASSET__img_background_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/BearHAT.png") class __ASSET__img_bearhat_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/BearLMG.png") class __ASSET__img_bearlmg_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonExit.png") class __ASSET__img_menubuttonexit_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonExitHover.png") class __ASSET__img_menubuttonexithover_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonStart.png") class __ASSET__img_menubuttonstart_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonStartHover.png") class __ASSET__img_menubuttonstarthover_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/PT76.png") class __ASSET__img_pt76_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/Top UI.png") class __ASSET__img_top_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/West Card Back.png") class __ASSET__img_west_card_back_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/West Card Front.png") class __ASSET__img_west_card_front_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/YPR.png") class __ASSET__img_ypr_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/YPRPRAT.png") class __ASSET__img_yprprat_png extends openfl.display.BitmapData {}
+//@:sound("assets/audio/AK_1.wav") class __ASSET__audio_ak_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AK_2.wav") class __ASSET__audio_ak_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AK_3.wav") class __ASSET__audio_ak_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AK_4.wav") class __ASSET__audio_ak_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Amb_1.mp3") class __ASSET__audio_amb_1_mp3 extends openfl.media.Sound {}
+//@:sound("assets/audio/Armor_Hit1.wav") class __ASSET__audio_armor_hit1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Armor_Hit2.wav") class __ASSET__audio_armor_hit2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Armor_Hit3.wav") class __ASSET__audio_armor_hit3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Arty_1.wav") class __ASSET__audio_arty_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Arty_2.wav") class __ASSET__audio_arty_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Arty_3.wav") class __ASSET__audio_arty_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Arty_4.wav") class __ASSET__audio_arty_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Arty_5.wav") class __ASSET__audio_arty_5_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AT4_1.wav") class __ASSET__audio_at4_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AT4_2.wav") class __ASSET__audio_at4_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/AT4_3.wav") class __ASSET__audio_at4_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/ATGM_1.wav") class __ASSET__audio_atgm_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/ATGM_2.wav") class __ASSET__audio_atgm_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/ATGM_3.wav") class __ASSET__audio_atgm_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/ATGM_4.wav") class __ASSET__audio_atgm_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Autocannon_1.wav") class __ASSET__audio_autocannon_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Autocannon_2.wav") class __ASSET__audio_autocannon_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Autocannon_3.wav") class __ASSET__audio_autocannon_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Beep1.wav") class __ASSET__audio_beep1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Burst_mg3.wav") class __ASSET__audio_burst_mg3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Burst_pkm.wav") class __ASSET__audio_burst_pkm_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Burst_rifle.wav") class __ASSET__audio_burst_rifle_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Burst_saw.wav") class __ASSET__audio_burst_saw_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Click1.wav") class __ASSET__audio_click1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Click3.wav") class __ASSET__audio_click3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/expl_1.wav") class __ASSET__audio_expl_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/expl_2.wav") class __ASSET__audio_expl_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/expl_3.wav") class __ASSET__audio_expl_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/expl_4.wav") class __ASSET__audio_expl_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/expl_5.wav") class __ASSET__audio_expl_5_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/G36_1.wav") class __ASSET__audio_g36_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/G36_2.wav") class __ASSET__audio_g36_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/G36_3.wav") class __ASSET__audio_g36_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Grenade_1.wav") class __ASSET__audio_grenade_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Grenade_launcher_1.wav") class __ASSET__audio_grenade_launcher_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/music/GameBGM1.wav") class __ASSET__audio_music_gamebgm1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/music/GameWin.wav") class __ASSET__audio_music_gamewin_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/music/Maintheme.mp3") class __ASSET__audio_music_maintheme_mp3 extends openfl.media.Sound {}
+//@:sound("assets/audio/Radio_1.WAV") class __ASSET__audio_radio_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_fire1.wav") class __ASSET__audio_rifle_fire1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_1.wav") class __ASSET__audio_rifle_hit_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_2.wav") class __ASSET__audio_rifle_hit_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_3.wav") class __ASSET__audio_rifle_hit_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_4.wav") class __ASSET__audio_rifle_hit_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_5.wav") class __ASSET__audio_rifle_hit_5_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Rifle_hit_6.wav") class __ASSET__audio_rifle_hit_6_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/RPG7_1.wav") class __ASSET__audio_rpg7_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/RPG7_2.wav") class __ASSET__audio_rpg7_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/SMG_1.wav") class __ASSET__audio_smg_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/SMG_2.wav") class __ASSET__audio_smg_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/SMG_3.wav") class __ASSET__audio_smg_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Sniper_1.wav") class __ASSET__audio_sniper_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Sniper_2.wav") class __ASSET__audio_sniper_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_fire_1.wav") class __ASSET__audio_tank_fire_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_fire_2.wav") class __ASSET__audio_tank_fire_2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_fire_3.wav") class __ASSET__audio_tank_fire_3_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_fire_4.wav") class __ASSET__audio_tank_fire_4_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_fire_5.wav") class __ASSET__audio_tank_fire_5_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_ground_hit1.wav") class __ASSET__audio_tank_ground_hit1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_ground_hit2.wav") class __ASSET__audio_tank_ground_hit2_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/Tank_ground_hit3.wav") class __ASSET__audio_tank_ground_hit3_wav extends openfl.media.Sound {}
+//@:file("assets/units/units.json") class __ASSET__units_units_json extends lime.utils.ByteArray {}
+//@:font("assets/font/Coderscrux.ttf") class __ASSET__font_coderscrux_ttf extends openfl.text.Font {}
+//@:font("assets/font/Colleged.ttf") class __ASSET__font_colleged_ttf extends openfl.text.Font {}
+//
+//
 
 #end
 
