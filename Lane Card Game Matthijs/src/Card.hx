@@ -11,6 +11,7 @@ import openfl.geom.Point;
 import openfl.geom.Rectangle;
 import typedefs.UnitStats;
 import typedefs.VisualData;
+import openfl.text.TextField;
 
 /**
  * Card Class
@@ -169,7 +170,18 @@ class Card extends Sprite
 		//add the rectangle of the next image in the sprite sheet
 		image.addTileRect( unitRectangle );
 		image.addTileRect( unitRectangle2 );
-		image.drawTiles( this.graphics, [ (-unitGraphics.spriteWidth/2)+75 ,(-unitGraphics.spriteHeight/2 +85), 0], true );
+		image.drawTiles( this.graphics, [ ( -unitGraphics.spriteWidth / 2) + 75 , ( -unitGraphics.spriteHeight / 2 +85), 0], true );
+		
+		var healthText = new TextField();
+		healthText.x = 50;
+		healthText.y = this.height - 25;
+		healthText.textColor = 0x32678B;
+		healthText.scaleX = healthText.scaleY = 1;
+		healthText.text = Std.string(unitStats.health);
+		healthText.selectable = false;
+		healthText.width = 600;
+		addChild(healthText);
+		
 	}
 	// Draws a standard Card to display stats
 	function drawCards(e:Event)

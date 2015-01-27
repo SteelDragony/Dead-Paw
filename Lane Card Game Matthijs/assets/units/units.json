@@ -40,7 +40,7 @@
 	{
 		"unitStats":
 			{
-				"health": 20,
+				"health": 10,
 				"armor": 0,
 				"softDamage": 4,
 				"apDamage": 0,
