@@ -60,4 +60,9 @@ class Hand extends Sprite
 		game.cardDrag(e.currentTarget);
 	}
 	
+	public function aiPlayCard(lane:Lane)
+	{
+		var tempCard:Card = handArray.pop();
+		game.spawnUnitOnDrag(tempCard.unitStats, tempCard.unitGraphics, this.playerSide, lane);
+	}
 }

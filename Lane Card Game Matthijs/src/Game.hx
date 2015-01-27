@@ -41,7 +41,7 @@ class Game extends Sprite
 	public var resroucesPlayer2:Int;
 	
 	//array for looping through the lanes
-	var lanes = new Array<Lane>();
+	public var lanes = new Array<Lane>();
 	
 	// the sound and music class and volumecontrol
 
@@ -51,6 +51,9 @@ class Game extends Sprite
 	public var sound = new Sound ();
 	var userinterface:Userinterface;
 	public var handChange:Bool = true;
+	
+	// the ai player
+	var ai:AiPlayer;
 	
 	/* ENTRY POINT */
 	
@@ -125,7 +128,7 @@ function resize(e)
 			setChildIndex(lane, 0);
 			lanes.push(lane);
 		}
-		
+		ai = new AiPlayer(this, hand2);
 		escButton();
 	}
 
@@ -139,6 +142,7 @@ function resize(e)
 		hand2.update();
 		handChange = false;
 		}
+		ai.update();
 		// side 1 units
 		/*
 		for ( unit1 in units1)
@@ -278,7 +282,7 @@ function resize(e)
 	
 	
 	// very basic unit spawn
-	function spawnUnitOnDrag(unitsStats:UnitStats, unitGrahics:VisualData, side:Int, lane:Lane )
+	public function spawnUnitOnDrag(unitsStats:UnitStats, unitGrahics:VisualData, side:Int, lane:Lane )
 	{
 		unithandler.spawnSquad(unitsStats, unitGrahics, sound, side, 0, lane);
 		/* old spawn code
