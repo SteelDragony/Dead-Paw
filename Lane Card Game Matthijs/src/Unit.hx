@@ -135,8 +135,8 @@ class Unit extends Sprite
 		shootStart = graphicData.shootStart - 1;
 		shootEnd = graphicData.shootEnd - 1;
 		
-		trace(walkStart);
-		trace(walkEnd);
+		//trace(walkStart);
+		//trace(walkEnd);
 		
 		curStart = walkStart;
 		curEnd = walkEnd;
@@ -283,7 +283,7 @@ class Unit extends Sprite
 	{
 		if (Std.random(101) > accuracy)
 		{
-			trace("Miss");
+			// trace("Miss");
 			animState = STATE_SHOOTING;
 			cooldownTimer = setCooldown;
 			sound.playSound(firingSound);
@@ -295,12 +295,12 @@ class Unit extends Sprite
 			if (critChance > randomNumber)
 			{
 				damageModifier = 1.2;
-				trace("CRIT!");
+				// trace("CRIT!");
 			}
 			else if (glancingChance + critChance > randomNumber)
 			{
 				damageModifier = 0.8;
-				trace("GLANCING HIT!");
+				// trace("GLANCING HIT!");
 			}
 			if (target.armor == 0)
 			{

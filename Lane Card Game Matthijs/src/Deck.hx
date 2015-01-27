@@ -48,7 +48,7 @@ class Deck extends Sprite
 	
 	function fillDeck()
 	{
-		trace ("filling");
+		// trace ("filling");
 		for ( i in 0 ... 10)
 		{
 			// var card = new Card(hand, side, "YPR", sound);
@@ -98,6 +98,7 @@ class Deck extends Sprite
 		for ( i in 0 ... 10)
 		{
 			deckArray.push("PandaRifle");
+			
 		}
 		for( i in 0 ... 10)
 		{
@@ -113,7 +114,7 @@ class Deck extends Sprite
 	
 	function shuffle()
 	{
-		trace ("shuffeling");
+		// trace ("shuffeling");
 		var temp = new Array<String>();
 		while ( deckArray.length > 0)
 		{

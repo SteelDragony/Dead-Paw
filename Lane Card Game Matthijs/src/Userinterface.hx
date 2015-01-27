@@ -23,6 +23,7 @@ class Userinterface extends Sprite
 	var handP2:Hand;
 	var currentTime:Float = 0;
 	var timeUntillCard:Float = 3;
+	var timeUntillCardAI:Float = 3;
 	var time = new TextField();
 	var score = new TextField();
 	var resources = new TextField();
@@ -171,8 +172,29 @@ class Userinterface extends Sprite
 		timeCard.selectable = false;
 		timeCard.defaultTextFormat = rightFormat;
 		// add something here to keep track of the players hand and the time
-		var tempArray:Array<Card> = handP1.handArray; 
-		if (tempArray.length < 5)
+		var tempArray2:Array<Card> = handP2.handArray;
+		if (tempArray2.length < 5)
+		{
+			
+			if (timeUntillCardAI <= 0)
+			{
+				timeUntillCardAI = 4;
+				game.addCard2();
+				// Add function call here to deck to add card.
+			}
+			if (timeUntillCardAI > 3)
+			{
+				timeUntillCardAI = 3;
+			}
+			timeUntillCardAI -= 0.05;
+			
+		}
+		if (tempArray2.length == 5 )
+		{
+			timeUntillCard = 99;
+		}
+		var tempArray1:Array<Card> = handP1.handArray; 
+		if (tempArray1.length < 5)
 		{
 			
 			if (timeUntillCard <= 0)
@@ -188,7 +210,7 @@ class Userinterface extends Sprite
 			timeUntillCard -= 0.05;
 			
 		}
-		if (tempArray.length == 5 )
+		if (tempArray1.length == 5 )
 		{
 			timeUntillCard = 99;
 		}

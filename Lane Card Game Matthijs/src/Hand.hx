@@ -34,22 +34,26 @@ class Hand extends Sprite
 				card.y = 590;
 			}
 		}
-		
-		if (playerSide == 2)
-		{
-			for ( card in handArray)
-			{
-				card.x = 10 + 160 * handArray.indexOf(card);
-				card.y = 10;
-			}
-		}
+		// This can be toggled on to show the cards present in the AI's Hand
+		//if (playerSide == 2)
+		//{
+			//for ( card in handArray)
+			//{
+				//card.x = 10 + 160 * handArray.indexOf(card);
+				//card.y = 10;
+			//}
+		//}
 	}
 	
 	// Used to add cards to the hands
 	public function addCard(unitType:String, soundHandler:Sound)
 	{
 		var card = new Card(this, playerSide, unitType, soundHandler);
+		// This can be toggled off to show the cards present in the AI's hand
+		if (playerSide == 1)
+		{
 		addChild(card);
+		}
 		handArray.push(card);
 		card.addEventListener(MouseEvent.MOUSE_UP, sendToGame);
 	}
