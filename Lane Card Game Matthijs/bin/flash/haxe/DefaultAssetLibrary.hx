@@ -44,6 +44,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("img/Background.png", __ASSET__img_background_png);
+		type.set ("img/Background.png", AssetType.IMAGE);
 		className.set ("img/BearAt.png", __ASSET__img_bearat_png);
 		type.set ("img/BearAt.png", AssetType.IMAGE);
 		className.set ("img/Cat_Sprint.png", __ASSET__img_cat_sprint_png);
@@ -54,6 +56,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/East Card Front.png", AssetType.IMAGE);
 		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
 		type.set ("img/Left UI.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonExit.png", __ASSET__img_menubuttonexit_png);
+		type.set ("img/MenuButtonExit.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonExitHover.png", __ASSET__img_menubuttonexithover_png);
+		type.set ("img/MenuButtonExitHover.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonStart.png", __ASSET__img_menubuttonstart_png);
+		type.set ("img/MenuButtonStart.png", AssetType.IMAGE);
+		className.set ("img/MenuButtonStartHover.png", __ASSET__img_menubuttonstarthover_png);
+		type.set ("img/MenuButtonStartHover.png", AssetType.IMAGE);
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
 		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
@@ -207,6 +217,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "img/Background.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "img/BearAt.png";
 		path.set (id, id);
 		
@@ -224,6 +238,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "img/Left UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonExit.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonExitHover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonStart.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/MenuButtonStartHover.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -606,6 +636,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__font_coderscrux_ttf);
 		openfl.text.Font.registerFont (__ASSET__font_colleged_ttf);
 		
@@ -614,6 +649,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		/*var useManifest = false;
+		
+		className.set ("img/Background.png", __ASSET__img_background_png);
+		type.set ("img/Background.png", AssetType.IMAGE);
 		
 		className.set ("img/BearAt.png", __ASSET__img_bearat_png);
 		type.set ("img/BearAt.png", AssetType.IMAGE);
@@ -629,6 +667,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("img/Left UI.png", __ASSET__img_left_ui_png);
 		type.set ("img/Left UI.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonExit.png", __ASSET__img_menubuttonexit_png);
+		type.set ("img/MenuButtonExit.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonExitHover.png", __ASSET__img_menubuttonexithover_png);
+		type.set ("img/MenuButtonExitHover.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonStart.png", __ASSET__img_menubuttonstart_png);
+		type.set ("img/MenuButtonStart.png", AssetType.IMAGE);
+		
+		className.set ("img/MenuButtonStartHover.png", __ASSET__img_menubuttonstarthover_png);
+		type.set ("img/MenuButtonStartHover.png", AssetType.IMAGE);
 		
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
@@ -1423,11 +1473,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__img_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_bearat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_cat_sprint_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_east_card_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_east_card_front_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_left_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonexit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonexithover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonstart_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_menubuttonstarthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_mid_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_right_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_rubearrifle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1584,6 +1639,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
 @:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Coderscrux.ttf"; } } 
 @:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Colleged.ttf"; } } 
 
@@ -1600,11 +1660,16 @@ class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new 
 #if (windows || mac || linux)
 
 //
+//@:bitmap("assets/img/Background.png") class __ASSET__img_background_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonExit.png") class __ASSET__img_menubuttonexit_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonExitHover.png") class __ASSET__img_menubuttonexithover_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonStart.png") class __ASSET__img_menubuttonstart_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/MenuButtonStartHover.png") class __ASSET__img_menubuttonstarthover_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends openfl.display.BitmapData {}

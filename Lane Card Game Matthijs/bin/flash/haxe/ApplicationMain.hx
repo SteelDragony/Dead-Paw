@@ -27,6 +27,10 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("img/Background.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/BearAt.png");
 		types.push (AssetType.IMAGE);
 		
@@ -44,6 +48,22 @@ class ApplicationMain {
 		
 		
 		urls.push ("img/Left UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/MenuButtonExit.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/MenuButtonExitHover.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/MenuButtonStart.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/MenuButtonStartHover.png");
 		types.push (AssetType.IMAGE);
 		
 		

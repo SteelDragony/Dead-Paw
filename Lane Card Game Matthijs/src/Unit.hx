@@ -46,6 +46,7 @@ class Unit extends Sprite
 	//sound stuff:
 	var sound:Sound;
 	var soundvolume:Float = 0.4 ;
+	var firingSound:String;
 	
 	//animation vars
 	
@@ -101,6 +102,8 @@ class Unit extends Sprite
 		moveSpeed = stats.moveSpeed;
 		range = stats.range;
 		sound = soundReference;
+		
+		firingSound = graphicData.firingSound;
 		
 		side = player;
 		this.squad = parentSquad;
@@ -225,6 +228,7 @@ class Unit extends Sprite
 					currentGame.player2hp -= Std.int(this.softDamage);
 					animState = STATE_SHOOTING;
 					cooldownTimer = burstRate;
+					sound.playSound(firingSound);
 				}
 				else 
 				{
@@ -232,6 +236,7 @@ class Unit extends Sprite
 					currentGame.player2hp -= Std.int(this.softDamage);
 					animState = STATE_SHOOTING;
 					cooldownTimer = cooldown;
+					sound.playSound(firingSound);
 				}
 			}
 			else if (cooldownTimer <= 0)
@@ -239,6 +244,7 @@ class Unit extends Sprite
 				currentGame.player2hp -= Std.int(this.softDamage);
 				animState = STATE_SHOOTING;
 				cooldownTimer = cooldown;
+				sound.playSound(firingSound);
 			}
 	}
 		if (this.side == 2)
@@ -254,7 +260,7 @@ class Unit extends Sprite
 			trace("Miss");
 			animState = STATE_SHOOTING;
 			cooldownTimer = setCooldown;
-			sound.playSound("autoCannon");
+			sound.playSound(firingSound);
 		}
 		else
 		{
@@ -276,7 +282,7 @@ class Unit extends Sprite
 				//trace("Soft");
 				target.health -= this.softDamage * damageModifier;
 				cooldownTimer = setCooldown;
-				sound.playSound("autoCannon");
+				sound.playSound(firingSound);
 			}
 			else if (apDamage > target.armor)
 			{
@@ -284,7 +290,7 @@ class Unit extends Sprite
 				//trace("armor");
 				target.health -= (apDamage * damageModifier - target.armor);
 				cooldownTimer = setCooldown;
-				sound.playSound("autoCannon");
+				sound.playSound(firingSound);
 			}
 		}
 	}

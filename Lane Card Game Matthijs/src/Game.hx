@@ -2,11 +2,13 @@ package ;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.events.MouseEvent;
+import openfl.events.KeyboardEvent;
 import openfl.Lib;
 import haxe.Timer;
 import openfl.ui.Keyboard;
 import typedefs.UnitStats;
 import typedefs.VisualData;
+import openfl.ui.Keyboard;
 
 /**
  * Game Class
@@ -17,7 +19,7 @@ import typedefs.VisualData;
 class Game extends Sprite
 {
 	var inited:Bool;
-	
+	public var exitGameBool:Bool = false;
 	// unit arrays storing all the units beloning to one side
 	var units1 = new Array<Unit>();
 	var units2 = new Array<Unit>();
@@ -115,6 +117,8 @@ function resize(e)
 			setChildIndex(lane, 0);
 			lanes.push(lane);
 		}
+		
+		escButton();
 	}
 
 	public function update()
@@ -190,6 +194,27 @@ function resize(e)
 			}
 		}
 		*/
+	}
+	
+	function escButton()
+	{
+		stage.addEventListener(KeyboardEvent.KEY_DOWN, exitGame);
+		//stage.addEventListener(MouseEvent.CLICK, exitGame);
+		this.graphics.beginFill(0xFFF000);
+		this.graphics.drawRect(10, 10, 200, 100);
+		this.graphics.endFill();
+		
+
+	}
+	function exitGame(e:KeyboardEvent)
+	{
+		if (e.keyCode == 27)
+		{
+			stage.removeEventListener(KeyboardEvent.KEY_DOWN, exitGame);
+			trace ("keystroke");
+			exitGameBool = true;
+		}
+		
 	}
 	
 	// starts draggin a card to play a unit, gets passed said card by hand. called from hand.

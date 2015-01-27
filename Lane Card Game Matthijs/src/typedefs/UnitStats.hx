@@ -19,4 +19,5 @@ typedef UnitStats =
 	var burstSize : Int;
 	var range : Int;
 	var moveSpeed : Int;
+	var squadSize : Int;
 }

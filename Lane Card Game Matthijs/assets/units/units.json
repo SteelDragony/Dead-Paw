@@ -15,7 +15,8 @@
 				"burstRate": 1,
 				"burstSize": 5,
 				"range": 300,
-				"moveSpeed": 5
+				"moveSpeed": 5,
+				"squadSize": 2			
 			},
 		"unitGraphics":
 			{
@@ -31,7 +32,8 @@
 				"deathEnd": 0,
 				"numFrames": 14,
 				"numRows": 4,
-				"numColums": 4
+				"numColums": 4,
+				"firingSound": "autoCannon"
 			}
 	},
 	"BearRifle":
@@ -50,7 +52,8 @@
 				"burstRate": 5,
 				"burstSize": 3,
 				"range": 300,
-				"moveSpeed": 5
+				"moveSpeed": 5,
+				"squadSize": 5
 			},
 		"unitGraphics":
 			{
@@ -66,7 +69,8 @@
 				"deathEnd": 0,
 				"numFrames": 15,
 				"numRows": 2,
-				"numColums": 8
+				"numColums": 8,
+				"firingSound": "ak"
 			}
 	},
 	"BearAt":
@@ -85,7 +89,8 @@
 				"burstRate": 1,
 				"burstSize": 1,
 				"range": 400,
-				"moveSpeed": 5
+				"moveSpeed": 5,
+				"squadSize": 3
 			},
 		"unitGraphics":
 			{
@@ -101,7 +106,8 @@
 				"deathEnd": 0,
 				"numFrames": 14,
 				"numRows": 2,
-				"numColums": 2
+				"numColums": 2,
+				"firingSound": "at4"
 			}
 	}
 }
