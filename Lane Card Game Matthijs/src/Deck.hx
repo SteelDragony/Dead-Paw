@@ -83,9 +83,13 @@ class Deck extends Sprite
 		{
 			deckArray.push("BearLmg");
 		}
-				for ( i in 0 ... 10)
+		for ( i in 0 ... 10)
 		{
 			deckArray.push("PandaLmg");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("PandaGL");
 		}
 		for ( i in 0 ... 10)
 		{

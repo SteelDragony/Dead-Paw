@@ -369,6 +369,43 @@
 				"firingSound": "rifleburst"
 			}
 	},
+		"PandaGL":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 0,
+				"softDamage": 20,
+				"apDamage": 0,
+				"accuracy": 95,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 40,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 310,
+				"moveSpeed": 5,
+				"squadSize": 3
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/PandaGL.png",
+				"spriteWidth": 64,
+				"spriteHeight": 32,
+				"idleFrame": 1,
+				"walkStart": 10,
+				"walkEnd": 15,
+				"shootStart": 6,
+				"shootEnd": 9,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 15,
+				"numRows": 2,
+				"numColums": 8,
+				"firingSound": "grenadeLauncher"
+			}
+	},
 	"BearLmg":
 	{
 		"unitStats":
