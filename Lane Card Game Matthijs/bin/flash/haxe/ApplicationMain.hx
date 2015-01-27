@@ -75,8 +75,56 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("audio/AK_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/AK_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/AK_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/AK_4.wav");
+		types.push (AssetType.SOUND);
+		
+		
 		urls.push ("audio/Amb_1.mp3");
 		types.push (AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Armor_Hit1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Armor_Hit2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Armor_Hit3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Arty_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Arty_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Arty_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Arty_4.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Arty_5.wav");
+		types.push (AssetType.SOUND);
 		
 		
 		urls.push ("audio/AT4_1.wav");
@@ -88,6 +136,22 @@ class ApplicationMain {
 		
 		
 		urls.push ("audio/AT4_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ATGM_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ATGM_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ATGM_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/ATGM_4.wav");
 		types.push (AssetType.SOUND);
 		
 		
@@ -107,7 +171,67 @@ class ApplicationMain {
 		types.push (AssetType.SOUND);
 		
 		
+		urls.push ("audio/Burst_mg3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Burst_pkm.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Burst_rifle.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Burst_saw.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Click1.wav");
+		types.push (AssetType.SOUND);
+		
+		
 		urls.push ("audio/Click3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/expl_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/expl_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/expl_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/expl_4.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/expl_5.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/G36_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/G36_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/G36_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Grenade_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Grenade_launcher_1.wav");
 		types.push (AssetType.SOUND);
 		
 		
@@ -121,6 +245,58 @@ class ApplicationMain {
 		
 		urls.push ("audio/music/Maintheme.mp3");
 		types.push (AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Radio_1.WAV");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_fire1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_4.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_5.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Rifle_hit_6.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/SMG_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/SMG_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/SMG_3.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Sniper_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Sniper_2.wav");
+		types.push (AssetType.SOUND);
 		
 		
 		urls.push ("audio/Tank_fire_1.wav");
@@ -140,6 +316,18 @@ class ApplicationMain {
 		
 		
 		urls.push ("audio/Tank_fire_5.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Tank_ground_hit1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Tank_ground_hit2.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/Tank_ground_hit3.wav");
 		types.push (AssetType.SOUND);
 		
 		
