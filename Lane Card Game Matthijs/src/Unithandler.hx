@@ -160,6 +160,14 @@ class Unithandler extends Sprite
 						}
 					}
 				}
+				if ( targetInRange == false)
+				{
+					if ( unit1.x - unit1.range <= 0)
+					{
+						unit1.attackBase(game);
+						targetInRange = true;
+					}
+				}
 			if (targetsInRange.length > 0)
 			{
 				//unit1.attack(targetsInRange[Std.random(targetsInRange.length)]);

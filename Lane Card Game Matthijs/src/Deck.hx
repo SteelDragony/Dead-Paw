@@ -1,4 +1,10 @@
 package ;
+import openfl.display.Sprite;
+import openfl.display.BitmapData;
+import openfl.Assets;
+import openfl.display.Bitmap;
+import openfl.display.Sprite;
+import openfl.Lib;
 
 /**
  * the deck of the player or ai.
@@ -20,12 +26,65 @@ package ;
  * 
  * @author Matthijs van Gelder
  */
-class Deck
+class Deck extends Sprite
 {
-
-	public function new() 
+	var sound:Sound; 
+	var deckArray = new Array<String>();
+	var hand:Hand;
+	var game:Game;
+	var side:Int;
+	
+	
+	public function new(currentGame:Game,player:Int) 
 	{
+		super();
+		side = player;
+		sound = new Sound();
+		game = currentGame;
+		// hand = new Hand(game,0);
+		fillDeck();
+		shuffle();
+	}
+	
+	function fillDeck()
+	{
+		trace ("filling");
+		for ( i in 0 ... 10)
+		{
+			// var card = new Card(hand, side, "YPR", sound);
+			deckArray.push("YPR");
+			
+		}
+		for( i in 0 ... 10)
+		{
+			// var card = new Card(hand, side, "BearRifle", sound);
+			deckArray.push("BearRifle");
+		}
+		for (i in 0 ... 10)
+		{
+			// var card = new Card(hand, side, "BearAt", sound);
+			deckArray.push("BearAt");
+		}
+	}
+	
+	function shuffle()
+	{
+		trace ("shuffeling");
+		var temp = new Array<String>();
+		while ( deckArray.length > 0)
+		{
+			var currentSpot = Std.random(deckArray.length);
+			temp.push(deckArray[currentSpot]);
+			deckArray.remove(deckArray[currentSpot]);
+		}
+		deckArray = temp;
 		
+	}
+	public function getCard():String
+	{
+		var tempcard:String;
+		tempcard = deckArray.pop();
+		return tempcard;
 	}
 	
 }
