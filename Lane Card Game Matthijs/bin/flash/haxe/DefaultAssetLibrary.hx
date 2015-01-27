@@ -180,6 +180,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/Rifle_hit_5.wav", AssetType.SOUND);
 		className.set ("audio/Rifle_hit_6.wav", __ASSET__audio_rifle_hit_6_wav);
 		type.set ("audio/Rifle_hit_6.wav", AssetType.SOUND);
+		className.set ("audio/RPG7_1.wav", __ASSET__audio_rpg7_1_wav);
+		type.set ("audio/RPG7_1.wav", AssetType.SOUND);
+		className.set ("audio/RPG7_2.wav", __ASSET__audio_rpg7_2_wav);
+		type.set ("audio/RPG7_2.wav", AssetType.SOUND);
 		className.set ("audio/SMG_1.wav", __ASSET__audio_smg_1_wav);
 		type.set ("audio/SMG_1.wav", AssetType.SOUND);
 		className.set ("audio/SMG_2.wav", __ASSET__audio_smg_2_wav);
@@ -489,6 +493,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
+		id = "audio/RPG7_1.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/RPG7_2.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "audio/SMG_1.wav";
 		path.set (id, id);
 		
@@ -558,6 +570,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#else
 		
 		#if openfl
+		
+		
 		
 		
 		
@@ -853,6 +867,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("audio/Rifle_hit_6.wav", __ASSET__audio_rifle_hit_6_wav);
 		type.set ("audio/Rifle_hit_6.wav", AssetType.SOUND);
+		
+		className.set ("audio/RPG7_1.wav", __ASSET__audio_rpg7_1_wav);
+		type.set ("audio/RPG7_1.wav", AssetType.SOUND);
+		
+		className.set ("audio/RPG7_2.wav", __ASSET__audio_rpg7_2_wav);
+		type.set ("audio/RPG7_2.wav", AssetType.SOUND);
 		
 		className.set ("audio/SMG_1.wav", __ASSET__audio_smg_1_wav);
 		type.set ("audio/SMG_1.wav", AssetType.SOUND);
@@ -1541,6 +1561,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_4_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_5_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_rifle_hit_6_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rpg7_1_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_rpg7_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_smg_1_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_smg_2_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_smg_3_wav extends flash.media.Sound { }
@@ -1562,6 +1584,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 #elseif html5
 
 #if openfl
+
+
 
 
 
@@ -1728,6 +1752,8 @@ class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new 
 //@:sound("assets/audio/Rifle_hit_4.wav") class __ASSET__audio_rifle_hit_4_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/Rifle_hit_5.wav") class __ASSET__audio_rifle_hit_5_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/Rifle_hit_6.wav") class __ASSET__audio_rifle_hit_6_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/RPG7_1.wav") class __ASSET__audio_rpg7_1_wav extends openfl.media.Sound {}
+//@:sound("assets/audio/RPG7_2.wav") class __ASSET__audio_rpg7_2_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/SMG_1.wav") class __ASSET__audio_smg_1_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/SMG_2.wav") class __ASSET__audio_smg_2_wav extends openfl.media.Sound {}
 //@:sound("assets/audio/SMG_3.wav") class __ASSET__audio_smg_3_wav extends openfl.media.Sound {}

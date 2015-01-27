@@ -55,6 +55,8 @@ class Sound extends Sprite
 	var smg3 = Assets.getSound("audio/SMG_3.wav");
 	var sniper1 = Assets.getSound("audio/Sniper_1.wav");
 	var sniper2 = Assets.getSound("audio/Sniper_2.wav");
+	var rpg1 = Assets.getSound("audio/RPG7_1.wav");
+	var rpg2 = Assets.getSound("audio/RPG7_2.wav");
 	
 	var soundVolume: Float;
 	var ambChannel:SoundChannel;
@@ -99,6 +101,8 @@ class Sound extends Sprite
 			soundSMG (soundVolume) ;
 			case "sniper" :
 			soundSniper (soundVolume) ;
+			case "rpg" :
+			soundRPG (soundVolume) ;
 			default :
 			testingSound (soundVolume);
 		}
@@ -268,6 +272,21 @@ class Sound extends Sprite
 			channel = sniper2.play( 0, 0, new SoundTransform(soundVolume ) );
 		default:
 			channel = sniper1.play( 0, 0, new SoundTransform(soundVolume ) );
+		}	
+	}
+	
+				function soundRPG (input:Float)
+	{
+		this.soundVolume = input ;
+		var randomSoundNumber:Int = Std.random(2) ;
+		switch( randomSoundNumber ) 
+		{
+		case 0:
+			channel = rpg1.play( 0, 0, new SoundTransform(soundVolume ) );
+		case 1:
+			channel = rpg2.play( 0, 0, new SoundTransform(soundVolume ) );
+		default:
+			channel = rpg1.play( 0, 0, new SoundTransform(soundVolume ) );
 		}	
 	}
 	

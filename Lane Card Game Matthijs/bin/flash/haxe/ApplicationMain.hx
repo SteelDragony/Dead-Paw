@@ -299,6 +299,14 @@ class ApplicationMain {
 		types.push (AssetType.SOUND);
 		
 		
+		urls.push ("audio/RPG7_1.wav");
+		types.push (AssetType.SOUND);
+		
+		
+		urls.push ("audio/RPG7_2.wav");
+		types.push (AssetType.SOUND);
+		
+		
 		urls.push ("audio/SMG_1.wav");
 		types.push (AssetType.SOUND);
 		
