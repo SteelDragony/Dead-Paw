@@ -76,6 +76,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("img/MerkavaMK3.png", AssetType.IMAGE);
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		className.set ("img/PandaLMG.png", __ASSET__img_pandalmg_png);
+		type.set ("img/PandaLMG.png", AssetType.IMAGE);
+		className.set ("img/PandaRifle.png", __ASSET__img_pandarifle_png);
+		type.set ("img/PandaRifle.png", AssetType.IMAGE);
 		className.set ("img/PT76.png", __ASSET__img_pt76_png);
 		type.set ("img/PT76.png", AssetType.IMAGE);
 		className.set ("img/Right UI.png", __ASSET__img_right_ui_png);
@@ -298,6 +302,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "img/Mid UI.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/PandaLMG.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "img/PandaRifle.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -711,6 +723,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__font_coderscrux_ttf);
 		openfl.text.Font.registerFont (__ASSET__font_colleged_ttf);
 		
@@ -767,6 +781,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("img/Mid UI.png", __ASSET__img_mid_ui_png);
 		type.set ("img/Mid UI.png", AssetType.IMAGE);
+		
+		className.set ("img/PandaLMG.png", __ASSET__img_pandalmg_png);
+		type.set ("img/PandaLMG.png", AssetType.IMAGE);
+		
+		className.set ("img/PandaRifle.png", __ASSET__img_pandarifle_png);
+		type.set ("img/PandaRifle.png", AssetType.IMAGE);
 		
 		className.set ("img/PT76.png", __ASSET__img_pt76_png);
 		type.set ("img/PT76.png", AssetType.IMAGE);
@@ -1589,6 +1609,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__img_menubuttonstarthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_merkavamk3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_mid_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_pandalmg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__img_pandarifle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_pt76_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_right_ui_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_rubearrifle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1764,6 +1786,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 @:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Coderscrux.ttf"; } } 
 @:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Colleged.ttf"; } } 
 
@@ -1796,6 +1820,8 @@ class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new 
 //@:bitmap("assets/img/MenuButtonStartHover.png") class __ASSET__img_menubuttonstarthover_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/MerkavaMK3.png") class __ASSET__img_merkavamk3_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/PandaLMG.png") class __ASSET__img_pandalmg_png extends openfl.display.BitmapData {}
+//@:bitmap("assets/img/PandaRifle.png") class __ASSET__img_pandarifle_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/PT76.png") class __ASSET__img_pt76_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends openfl.display.BitmapData {}
 //@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends openfl.display.BitmapData {}

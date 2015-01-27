@@ -91,6 +91,14 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/PandaLMG.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/PandaRifle.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/PT76.png");
 		types.push (AssetType.IMAGE);
 		
