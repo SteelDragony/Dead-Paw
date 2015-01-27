@@ -1,7 +1,7 @@
 *.swf
-Lane Card Game Matthijs/bin/flash/bin/LaneCardGame.swf
-Lane Card Game Matthijs/bin/flash/obj/assets.swf
-Lane Card Game Matthijs/bin/
+bin/flash/bin/LaneCardGame.swf
+bin/flash/obj/assets.swf
+bin/
 bin/
 bin-debug/
 bin-release/
