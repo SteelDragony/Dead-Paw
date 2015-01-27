@@ -66,7 +66,6 @@ class Main extends Sprite
 			{
 				removeChild(game);
 				drawmenu();
-				trace ("stuff");
 				exitGameBool = false;
 				menu.start = false;
 				started = false;
