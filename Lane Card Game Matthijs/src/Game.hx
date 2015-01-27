@@ -91,8 +91,8 @@ function resize(e)
 		//addChild(deck);
 		resourcesPlayer1 = 19;
 		resourcesPlayer1 = 19;
-		player1hp = 24;
-		player2hp = 25;
+		player1hp = 100;
+		player2hp = 100;
 		
 		//unit test code, will be removed
 		/*
@@ -146,6 +146,18 @@ function resize(e)
 		handChange = false;
 		}
 		ai.update();
+		
+		if (player1hp <= 0)
+		{
+			exitGameBool = true;
+			trace ("Player 2 wins the game");
+		}
+		else if (player2hp <= 0)
+		{
+			exitGameBool = true;
+			trace ("Player 1 wins the game");
+		}
+		
 		// side 1 units
 		/*
 		for ( unit1 in units1)

@@ -72,7 +72,7 @@ class Menu extends openfl.display.Sprite
 		
 	}
 
-	function playMusic ()
+	public function playMusic ()
 	{
 		addChild(menuMusic);
 		menuMusic.mainMenuMusic (musicvolume) ;

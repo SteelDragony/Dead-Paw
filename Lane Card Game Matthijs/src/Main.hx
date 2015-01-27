@@ -64,6 +64,8 @@ class Main extends Sprite
 			game.update();
 			if (game.exitGameBool == true)
 			{
+				game.sound.stopAmbsounds ();
+				menu.playMusic ();
 				removeChild(game);
 				drawmenu();
 				trace ("stuff");
