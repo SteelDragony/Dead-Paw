@@ -45,7 +45,7 @@ class Game extends Sprite
 	
 	// the sound and music class and volumecontrol
 
-	var soundvolume:Float = 1.0 ;
+	var soundvolume:Float = 0.1 ;
 	var musicvolume:Float = 1.0 ;
 	var music = new Music ();
 	public var sound = new Sound ();

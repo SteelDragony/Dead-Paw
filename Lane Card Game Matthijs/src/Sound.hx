@@ -12,7 +12,7 @@ import openfl.Assets.loadSound;
 
 /**
  * ...
- * @author Andor
+ * @author Andor Reineking
  */
 class Sound extends Sprite 
 {
