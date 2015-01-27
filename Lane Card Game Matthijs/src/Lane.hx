@@ -8,7 +8,7 @@ import openfl.events.Event;
  */
 class Lane extends Sprite
 {
-	var tallness:Int = 100;
+	var tallness:Int = 120;
 	public var number:Int;
 	var colour:Int;
 
@@ -22,7 +22,7 @@ class Lane extends Sprite
 	function init(e)
 	{
 		drawBox();
-		this.y =  50 + number * tallness;
+		this.y = number * tallness;
 	}
 	function drawBox()
 	{

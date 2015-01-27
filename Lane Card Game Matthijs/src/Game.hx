@@ -1,4 +1,6 @@
 package ;
+import openfl.Assets;
+import openfl.display.Bitmap;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.events.MouseEvent;
@@ -78,7 +80,8 @@ function resize(e)
 		sound.soundAmb1(soundvolume);
 		
 		// (your code here)
-		
+		var backGround = new Bitmap(Assets.getBitmapData("img/Map.png"));
+		addChild(backGround);
 		unithandler = new Unithandler(this);
 		addChild(unithandler);
 		userinterface = new Userinterface(this);
