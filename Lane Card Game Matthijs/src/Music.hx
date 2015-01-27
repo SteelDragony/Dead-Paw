@@ -31,6 +31,11 @@ class Music extends Sprite
 		
 	}
 	
+	public function stopMusic ()
+	{
+		soundChannel.soundTransform = new SoundTransform (0);
+	}
+	
 	public function gameMusic (input:Float)
 	
 	{

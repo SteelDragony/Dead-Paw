@@ -36,6 +36,43 @@
 				"firingSound": "autoCannon"
 			}
 	},
+	"YPRPRAT":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 2,
+				"softDamage": 0,
+				"apDamage": 20,
+				"accuracy": 95,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 60,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 500,
+				"moveSpeed": 5,
+				"squadSize": 2	
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/YPRPRAT.png",
+				"spriteWidth": 128,
+				"spriteHeight": 128,
+				"idleFrame": 1,
+				"walkStart": 1,
+				"walkEnd": 10,
+				"shootStart": 11,
+				"shootEnd": 13,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 13,
+				"numRows": 4,
+				"numColums": 4,
+				"firingSound": "atgm"
+			}
+	},
 	"BearRifle":
 	{
 		"unitStats":

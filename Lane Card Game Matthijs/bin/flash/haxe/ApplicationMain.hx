@@ -35,6 +35,14 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/BearHAT.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/BearLMG.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/Cat_Sprint.png");
 		types.push (AssetType.IMAGE);
 		
@@ -92,6 +100,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("img/YPR.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/YPRPRAT.png");
 		types.push (AssetType.IMAGE);
 		
 		
