@@ -248,7 +248,6 @@ function resize(e)
 		if (e.keyCode == 27)
 		{
 			stage.removeEventListener(KeyboardEvent.KEY_DOWN, exitGame);
-			trace ("keystroke");
 			exitGameBool = true;
 		}
 		

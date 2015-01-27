@@ -68,7 +68,6 @@ class Main extends Sprite
 				menu.playMusic ();
 				removeChild(game);
 				drawmenu();
-				trace ("stuff");
 				exitGameBool = false;
 				menu.start = false;
 				started = false;
