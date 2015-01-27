@@ -67,6 +67,10 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("img/Map.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("img/MenuButtonExit.png");
 		types.push (AssetType.IMAGE);
 		
@@ -88,6 +92,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("img/Mid UI.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("img/PandaGL.png");
 		types.push (AssetType.IMAGE);
 		
 		
