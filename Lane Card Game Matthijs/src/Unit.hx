@@ -246,10 +246,36 @@ class Unit extends Sprite
 				cooldownTimer = cooldown;
 				sound.playSound(firingSound);
 			}
-	}
+		}
 		if (this.side == 2)
 		{
-			currentGame.player1hp - this.softDamage;
+			if (burst == true && cooldownTimer <= 0)
+			{
+				if ( -cooldownTimer > cooldown) currentshot = 1;
+				if (burstSize > currentshot)
+				{
+					currentshot ++;
+					currentGame.player1hp -= Std.int(this.softDamage);
+					animState = STATE_SHOOTING;
+					cooldownTimer = burstRate;
+					sound.playSound(firingSound);
+				}
+				else 
+				{
+					currentshot = 1;
+					currentGame.player1hp -= Std.int(this.softDamage);
+					animState = STATE_SHOOTING;
+					cooldownTimer = cooldown;
+					sound.playSound(firingSound);
+				}
+			}
+			else if (cooldownTimer <= 0)
+			{
+				currentGame.player1hp -= Std.int(this.softDamage);
+				animState = STATE_SHOOTING;
+				cooldownTimer = cooldown;
+				sound.playSound(firingSound);
+			}
 		}
 	}
 	
