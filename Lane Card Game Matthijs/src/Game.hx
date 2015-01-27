@@ -29,9 +29,12 @@ class Game extends Sprite
 	public var player2hp:Int;
 	
 	// declare Class scope variables
-	var hand1:Hand;
-	var hand2:Hand;
+	public var hand1:Hand;
+	public var hand2:Hand;
+	var deck1:Deck;
+	var deck2:Deck;
 	var unithandler:Unithandler;
+	
 	
 	//variables to store resources
 	public var resourcesPlayer1:Int;
@@ -45,7 +48,7 @@ class Game extends Sprite
 	var soundvolume:Float = 1.0 ;
 	var musicvolume:Float = 1.0 ;
 	var music = new Music ();
-	var sound = new Sound ();
+	public var sound = new Sound ();
 	var userinterface:Userinterface;
 	public var handChange:Bool = true;
 	
@@ -75,8 +78,11 @@ function resize(e)
 		
 		unithandler = new Unithandler(this);
 		addChild(unithandler);
-		userinterface = new Userinterface();
+		userinterface = new Userinterface(this);
 		addChild(userinterface);
+		deck1 = new Deck(this, 1);
+		deck2 = new Deck(this, 2);
+		//addChild(deck);
 		resourcesPlayer1 = 19;
 		resourcesPlayer1 = 19;
 		player1hp = 24;
@@ -102,13 +108,15 @@ function resize(e)
 		hand2 = new Hand( this, 2 );
 		addChild(hand1);
 		addChild(hand2);
-		hand1.addCard("YPR", sound); 
-		hand1.addCard("YPR", sound);
-		hand1.addCard("YPR", sound);
-		hand1.addCard("BearRifle", sound);
-		hand1.addCard("BearAt", sound);
-		hand2.addCard("YPR", sound);
-		hand2.addCard("BearRifle", sound);
+			
+		for (i in 0 ... 5)
+		{
+			hand1.addCard(deck1.getCard(), sound);
+		}
+		for ( i in 0 ... 5)
+		{
+			hand2.addCard(deck1.getCard(), sound);
+		}
 		
 		for ( i in 0 ... 5 )
 		{
@@ -195,6 +203,16 @@ function resize(e)
 		}
 		*/
 	}
+	public function addCard1()
+	{
+		hand1.addCard(deck1.getCard(), sound);
+		handChange = true;
+	}
+	
+	public function addCard2()
+	{
+		hand2.addCard(deck2.getCard(), sound);
+	}
 	
 	function escButton()
 	{
@@ -230,28 +248,28 @@ function resize(e)
 				hand1.handArray.remove(card);
 				removeChild(card);
 				stage.removeEventListener(MouseEvent.MOUSE_UP, card.stopdragging);
-				if (card.unitGraphics.spriteSheet == "img/YPR.png")
-				{
-					if (card.side == 1)
-					{
-						//hand1.addCard("YPR", sound);
-					}
-					if (card.side == 2)
-					{
-						//hand2.addCard("YPR", sound);
-					}
-				}
-				else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
-				{
-					if (card.side == 1)
-					{
-						hand1.addCard("BearRifle", sound);
-					}
-					if (card.side == 2)
-					{
-						hand2.addCard("BearRifle", sound);
-					}
-				}
+				//if (card.unitGraphics.spriteSheet == "img/YPR.png")
+				//{
+					//if (card.side == 1)
+					//{
+						////hand1.addCard("YPR", sound);
+					//}
+					//if (card.side == 2)
+					//{
+						////hand2.addCard("YPR", sound);
+					//}
+				//}
+				//else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
+				//{
+					//if (card.side == 1)
+					//{
+						//hand1.addCard("BearRifle", sound);
+					//}
+					//if (card.side == 2)
+					//{
+						//hand2.addCard("BearRifle", sound);
+					//}
+				//}
 				sound.playSound("click");
 				handChange = true;
 			}

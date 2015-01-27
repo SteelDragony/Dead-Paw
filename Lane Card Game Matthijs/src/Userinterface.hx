@@ -30,10 +30,12 @@ class Userinterface extends Sprite
 	var rightFormat = new TextFormat();
 	var centerFormat = new TextFormat();
 	var stamp:Float;
+	var game:Game;
 	
-	public function new() 
+	public function new(currentGame:Game) 
 	{
 		super();
+		game = currentGame;
 		drawUI();
 		setUpFonts();
 		
@@ -176,6 +178,7 @@ class Userinterface extends Sprite
 			if (timeUntillCard <= 0)
 			{
 				timeUntillCard = 4;
+				game.addCard1();
 				// Add function call here to deck to add card.
 			}
 			if (timeUntillCard > 3)

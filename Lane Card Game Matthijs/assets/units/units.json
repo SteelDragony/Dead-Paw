@@ -73,6 +73,43 @@
 				"firingSound": "ak"
 			}
 	},
+	"BearLmg":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 0,
+				"softDamage": 8,
+				"apDamage": 0,
+				"accuracy": 70,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 20,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 320,
+				"moveSpeed": 5,
+				"squadSize": 3
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/BearLMG.png",
+				"spriteWidth": 64,
+				"spriteHeight": 32,
+				"idleFrame": 1,
+				"walkStart": 10,
+				"walkEnd": 15,
+				"shootStart": 6,
+				"shootEnd": 9,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 15,
+				"numRows": 2,
+				"numColums": 8,
+				"firingSound": "pkp"
+			}
+	},
 	"BearAt":
 	{
 		"unitStats":
@@ -106,8 +143,45 @@
 				"deathEnd": 0,
 				"numFrames": 14,
 				"numRows": 2,
-				"numColums": 2,
-				"firingSound": "at4"
+				"numColums": 7,
+				"firingSound": "rpg"
+			}
+	},
+	"BearHAT":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 0,
+				"softDamage": 0,
+				"apDamage": 20,
+				"accuracy": 95,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 60,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 500,
+				"moveSpeed": 5,
+				"squadSize": 2
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/BearHAT.png",
+				"spriteWidth": 64,
+				"spriteHeight": 32,
+				"idleFrame": 1,
+				"walkStart": 8,
+				"walkEnd": 13,
+				"shootStart": 5,
+				"shootEnd": 7,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 13,
+				"numRows": 2,
+				"numColums": 7,
+				"firingSound": "atgm"
 			}
 	}
 }
