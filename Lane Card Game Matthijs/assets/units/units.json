@@ -110,6 +110,80 @@
 				"firingSound": "tankGun"
 			}
 	},
+	"MerkavaMK3":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 10,
+				"softDamage": 5,
+				"apDamage": 18,
+				"accuracy": 70,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 40,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 300,
+				"moveSpeed": 5,
+				"squadSize": 2			
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/MerkavaMK3.png",
+				"spriteWidth": 128,
+				"spriteHeight": 128,
+				"idleFrame": 1,
+				"walkStart": 1,
+				"walkEnd": 12,
+				"shootStart": 13,
+				"shootEnd": 24,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 24,
+				"numRows": 3,
+				"numColums": 8,
+				"firingSound": "tankGun"
+			}
+	},
+	"Type99":
+	{
+		"unitStats":
+			{
+				"health": 20,
+				"armor": 10,
+				"softDamage": 5,
+				"apDamage": 18,
+				"accuracy": 70,
+				"critChance": 10,
+				"glancingChance": 20,
+				"cooldown": 40,
+				"burst": false,
+				"burstRate": 1,
+				"burstSize": 1,
+				"range": 300,
+				"moveSpeed": 5,
+				"squadSize": 2			
+			},
+		"unitGraphics":
+			{
+				"spriteSheet": "img/Type99.png",
+				"spriteWidth": 182,
+				"spriteHeight": 128,
+				"idleFrame": 1,
+				"walkStart": 1,
+				"walkEnd": 4,
+				"shootStart": 5,
+				"shootEnd": 8,
+				"deathStart": 0,
+				"deathEnd": 0,
+				"numFrames": 8,
+				"numRows": 2,
+				"numColums": 4,
+				"firingSound": "tankGun"
+			}
+	},
 	"YPRPRAT":
 	{
 		"unitStats":
