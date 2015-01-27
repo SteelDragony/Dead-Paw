@@ -55,6 +55,38 @@ class Deck extends Sprite
 			deckArray.push("YPR");
 			
 		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("PT76");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("AMX13");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("MerkavaMK3");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("Type99");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("YPRPRAT");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("BRDMAT");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("BearLmg");
+		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("BearHAT");
+		}
 		for( i in 0 ... 10)
 		{
 			// var card = new Card(hand, side, "BearRifle", sound);

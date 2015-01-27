@@ -163,7 +163,7 @@ class Sound extends Sprite
 		}	
 	}
 	
-		function soundAutoCannon (input:Float)
+	function soundAutoCannon (input:Float)
 	{
 		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(3) ;
@@ -240,7 +240,7 @@ class Sound extends Sprite
 		}	
 	}
 	
-		function soundSMG (input:Float)
+	function soundSMG (input:Float)
 	{
 		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(3) ;
@@ -257,7 +257,7 @@ class Sound extends Sprite
 		}	
 	}
 	
-			function soundSniper (input:Float)
+	function soundSniper (input:Float)
 	{
 		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(2) ;
@@ -272,7 +272,7 @@ class Sound extends Sprite
 		}	
 	}
 	
-				function soundRPG (input:Float)
+	function soundRPG (input:Float)
 	{
 		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(2) ;
