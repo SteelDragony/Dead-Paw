@@ -87,6 +87,10 @@ class Deck extends Sprite
 		{
 			deckArray.push("BearHAT");
 		}
+		for ( i in 0 ... 10)
+		{
+			deckArray.push("PandaRifle");
+		}
 		for( i in 0 ... 10)
 		{
 			// var card = new Card(hand, side, "BearRifle", sound);
