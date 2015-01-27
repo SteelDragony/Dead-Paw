@@ -53,7 +53,7 @@ class Squad extends Sprite
 	function added(e)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, added);
-		for (i in 0 ... 1) 
+		for (i in 0 ... unitStatistics.squadSize) 
 		{
 			var unit = new Unit(this, side, unitStatistics, unitVisuals, soundReference);
 			unit.x = 50 + formation[i].x;

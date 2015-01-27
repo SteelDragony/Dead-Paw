@@ -19,4 +19,5 @@ typedef VisualData =
 	var numFrames : Int;
 	var numRows : Int;
 	var numColums : Int;
+	var firingSound : String;
 }

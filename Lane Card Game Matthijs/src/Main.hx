@@ -19,9 +19,14 @@ import openfl.ui.Keyboard;
 
 class Main extends Sprite 
 {
+	
+	var menu:Menu = new Menu();
 	var inited:Bool;
-
 	var game:Game; //define game outside the functions so it can be accesed by all of them.
+	public var started:Bool = false;
+	public var exitGameBool:Bool = false; 
+	
+	
 	
 	function resize(e) 
 	{
@@ -33,10 +38,9 @@ class Main extends Sprite
 	{
 		if (inited) return;
 		inited = true;
-
+		drawmenu();
 		// (your code here)
-		game = new Game(); // actually create the game.
-		addChild(game); // add it as a child to display is.
+
 		update(); // starts running the update function.
 	}
 
@@ -47,8 +51,27 @@ class Main extends Sprite
 	 */
 	function update()
 	{
-	
-		game.update();
+
+		if (menu.start && started == false)
+		{
+			removeChild(menu);
+			game = new Game(); // actually create the game.
+			addChild(game); // add it as a child to display is.
+			started = true;
+		}
+		if (started)
+		{
+			game.update();
+			if (game.exitGameBool == true)
+			{
+				removeChild(game);
+				drawmenu();
+				trace ("stuff");
+				exitGameBool = false;
+				menu.start = false;
+				started = false;
+			}
+		}
 		Timer.delay(update, 50); // update freuency by delay
 	}
 	
@@ -80,4 +103,12 @@ class Main extends Sprite
 		Lib.current.stage.scaleMode = flash.display.StageScaleMode.NO_SCALE;
 		Lib.current.addChild(new Main());
 	}
+
+	function drawmenu()
+	{
+		addChild(menu);
+		// trace("drw");
+		
+	}	
 }
+
