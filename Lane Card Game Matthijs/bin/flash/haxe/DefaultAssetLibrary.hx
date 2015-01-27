@@ -284,7 +284,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if (windows || mac || linux)
 		
-		/*var useManifest = false;
+		var useManifest = false;
 		
 		className.set ("img/BearAt.png", __ASSET__img_bearat_png);
 		type.set ("img/BearAt.png", AssetType.IMAGE);
@@ -381,8 +381,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/Colleged.ttf", __ASSET__font_colleged_ttf);
 		type.set ("font/Colleged.ttf", AssetType.FONT);
-		*/
-		var useManifest = true;
+		
 		
 		if (useManifest) {
 			
@@ -531,10 +530,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#else
 		
-		//return null;
-		//if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
-		//else 
-		return ByteArray.readFile (path.get (id));
+		if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
+		else return ByteArray.readFile (path.get (id));
 		
 		#end
 		
@@ -828,6 +825,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 			var bytes = ByteArray.readFile ("../res/manifest");
 			#elseif emscripten
 			var bytes = ByteArray.readFile ("assets/manifest");
+			#elseif (mac && java)
+			var bytes = ByteArray.readFile ("../Resources/manifest");
 			#else
 			var bytes = ByteArray.readFile ("manifest");
 			#end
@@ -1020,56 +1019,56 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-@:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Coderscrux.ttf"; } } 
-@:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "font/Colleged.ttf"; } } 
+@:keep #if display private #end class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); fontName = "Coder's Crux Regular"; } } 
+@:keep #if display private #end class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); fontName = "Colleged"; } } 
 
 #end
 
 #else
 
 #if openfl
-class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Coderscrux.ttf"; fontName = "Coder's Crux Regular"; }}
-class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Colleged.ttf"; fontName = "Colleged"; }}
+@:keep class __ASSET__font_coderscrux_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Coderscrux.ttf"; fontName = "Coder's Crux Regular"; }}
+@:keep class __ASSET__font_colleged_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Colleged.ttf"; fontName = "Colleged"; }}
 
 #end
 
 #if (windows || mac || linux)
 
-//
-//@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/Top UI.png") class __ASSET__img_top_ui_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/West Card Back.png") class __ASSET__img_west_card_back_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/West Card Front.png") class __ASSET__img_west_card_front_png extends openfl.display.BitmapData {}
-//@:bitmap("assets/img/YPR.png") class __ASSET__img_ypr_png extends openfl.display.BitmapData {}
-//@:sound("assets/audio/Amb_1.mp3") class __ASSET__audio_amb_1_mp3 extends openfl.media.Sound {}
-//@:sound("assets/audio/AT4_1.wav") class __ASSET__audio_at4_1_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/AT4_2.wav") class __ASSET__audio_at4_2_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/AT4_3.wav") class __ASSET__audio_at4_3_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Autocannon_1.wav") class __ASSET__audio_autocannon_1_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Autocannon_2.wav") class __ASSET__audio_autocannon_2_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Autocannon_3.wav") class __ASSET__audio_autocannon_3_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Beep1.wav") class __ASSET__audio_beep1_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Click3.wav") class __ASSET__audio_click3_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/music/GameBGM1.wav") class __ASSET__audio_music_gamebgm1_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/music/GameWin.wav") class __ASSET__audio_music_gamewin_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/music/Maintheme.mp3") class __ASSET__audio_music_maintheme_mp3 extends openfl.media.Sound {}
-//@:sound("assets/audio/Tank_fire_1.wav") class __ASSET__audio_tank_fire_1_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Tank_fire_2.wav") class __ASSET__audio_tank_fire_2_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Tank_fire_3.wav") class __ASSET__audio_tank_fire_3_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Tank_fire_4.wav") class __ASSET__audio_tank_fire_4_wav extends openfl.media.Sound {}
-//@:sound("assets/audio/Tank_fire_5.wav") class __ASSET__audio_tank_fire_5_wav extends openfl.media.Sound {}
-//@:file("assets/units/units.json") class __ASSET__units_units_json extends lime.utils.ByteArray {}
-//@:font("assets/font/Coderscrux.ttf") class __ASSET__font_coderscrux_ttf extends openfl.text.Font {}
-//@:font("assets/font/Colleged.ttf") class __ASSET__font_colleged_ttf extends openfl.text.Font {}
-//
-//
+
+@:bitmap("assets/img/BearAt.png") class __ASSET__img_bearat_png extends lime.graphics.Image {}
+@:bitmap("assets/img/Cat_Sprint.png") class __ASSET__img_cat_sprint_png extends lime.graphics.Image {}
+@:bitmap("assets/img/East Card Back.png") class __ASSET__img_east_card_back_png extends lime.graphics.Image {}
+@:bitmap("assets/img/East Card Front.png") class __ASSET__img_east_card_front_png extends lime.graphics.Image {}
+@:bitmap("assets/img/Left UI.png") class __ASSET__img_left_ui_png extends lime.graphics.Image {}
+@:bitmap("assets/img/Mid UI.png") class __ASSET__img_mid_ui_png extends lime.graphics.Image {}
+@:bitmap("assets/img/Right UI.png") class __ASSET__img_right_ui_png extends lime.graphics.Image {}
+@:bitmap("assets/img/RuBearRifle.png") class __ASSET__img_rubearrifle_png extends lime.graphics.Image {}
+@:bitmap("assets/img/Top UI.png") class __ASSET__img_top_ui_png extends lime.graphics.Image {}
+@:bitmap("assets/img/West Card Back.png") class __ASSET__img_west_card_back_png extends lime.graphics.Image {}
+@:bitmap("assets/img/West Card Front.png") class __ASSET__img_west_card_front_png extends lime.graphics.Image {}
+@:bitmap("assets/img/YPR.png") class __ASSET__img_ypr_png extends lime.graphics.Image {}
+@:sound("assets/audio/Amb_1.mp3") class __ASSET__audio_amb_1_mp3 extends lime.audio.AudioSource {}
+@:sound("assets/audio/AT4_1.wav") class __ASSET__audio_at4_1_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/AT4_2.wav") class __ASSET__audio_at4_2_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/AT4_3.wav") class __ASSET__audio_at4_3_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Autocannon_1.wav") class __ASSET__audio_autocannon_1_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Autocannon_2.wav") class __ASSET__audio_autocannon_2_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Autocannon_3.wav") class __ASSET__audio_autocannon_3_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Beep1.wav") class __ASSET__audio_beep1_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Click3.wav") class __ASSET__audio_click3_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/music/GameBGM1.wav") class __ASSET__audio_music_gamebgm1_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/music/GameWin.wav") class __ASSET__audio_music_gamewin_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/music/Maintheme.mp3") class __ASSET__audio_music_maintheme_mp3 extends lime.audio.AudioSource {}
+@:sound("assets/audio/Tank_fire_1.wav") class __ASSET__audio_tank_fire_1_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Tank_fire_2.wav") class __ASSET__audio_tank_fire_2_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Tank_fire_3.wav") class __ASSET__audio_tank_fire_3_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Tank_fire_4.wav") class __ASSET__audio_tank_fire_4_wav extends lime.audio.AudioSource {}
+@:sound("assets/audio/Tank_fire_5.wav") class __ASSET__audio_tank_fire_5_wav extends lime.audio.AudioSource {}
+@:file("assets/units/units.json") class __ASSET__units_units_json extends lime.utils.ByteArray {}
+@:font("assets/font/Coderscrux.ttf") class __ASSET__font_coderscrux_ttf extends lime.graphics.Font {}
+@:font("assets/font/Colleged.ttf") class __ASSET__font_colleged_ttf extends lime.graphics.Font {}
+
+
 
 #end
 
