@@ -1,6 +1,7 @@
 package typedefs ;
 
 /**
+ * typedef for storing and handin a units combat and balance related variables in a compact way
  * @author Matthijs van Gelder
  */
 
