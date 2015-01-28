@@ -77,8 +77,15 @@ function resize(e)
 		// Adding children for sound and music libs //
 		addChild (sound) ;
 		addChild (music) ;
+
+
+		// update the sound and music volume
+		sound.updateSoundVolume (soundvolume);
+		music.updateMusicVolume (musicvolume);
+		
 		// playing Ambient sound loop //
-		sound.soundAmb1(soundvolume);
+		sound.soundAmb1();
+		
 		// Adds background to the game
 		var backGround = new Bitmap(Assets.getBitmapData("img/Map.png"));
 		addChild(backGround);

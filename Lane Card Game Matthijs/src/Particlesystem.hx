@@ -2,7 +2,9 @@ package ;
 
 /**
  * ...
- * @author Matthijs van Gelder
+ * @author ..
+ * 
+ * Not implemented
  */
 class Particlesystem
 {

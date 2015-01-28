@@ -7,13 +7,13 @@ import typedefs.VisualData;
 /**
  * Unithandler Class
  * 
- * will take care of all unit related tasks:
+ * takes care of all unit related tasks:
 	 * calling unit updates
 	 * doing range checks
 	 * spawning squads
 	 * removing squads
  * 
- * will hold 2 arrays containing the squads for both sides
+ * holds 2 arrays containing the squads for both sides
  * 
  * @author Matthijs van Gelder
  */
@@ -35,14 +35,10 @@ class Unithandler extends Sprite
 	function added(e)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, added);
-		/* old test code to be removed
-		var squad = new Squad(0);
-		squads1.push(squad);
-		addChild(squad);
-		trace(squad);
-		*/
 	}
-	
+	/*
+	 * calls rangeChecks and updates all squads
+	 */
 	public function update()
 	{
 		rangeChecks();
@@ -58,6 +54,10 @@ class Unithandler extends Sprite
 		}
 	}
 	
+	/*
+	 * spawns a new squad.
+	 * called from game with the data handed to it from the card that was played.
+	 */
 	public function spawnSquad(unitsStats:UnitStats, unitGraphics:VisualData, soundRef:Sound, side:Int, size:Int, lane:Lane)
 	{
 		var squad = new Squad(unitsStats,unitGraphics, soundRef, side, lane);
@@ -66,6 +66,10 @@ class Unithandler extends Sprite
 		addChild(squad);
 	}
 	
+	/*
+	 * checks for every unit if there is a target in range, if so gives the unit an array of targets that are in range
+	 * else if no targets are in range tell the unit to move again
+	 */
 	function rangeChecks()
 	{
 		// side 1 units
@@ -104,35 +108,36 @@ class Unithandler extends Sprite
 						}
 					}
 				}
+				// if no units where in range, check to see if the enemy base is in range
 				if ( targetInRange == false)
 				{
+					//check if base is in range
 					if ( unit1.x + unit1.range > stage.stageWidth)
 					{
-						unit1.attackBase(game);
-						targetInRange = true;
+						unit1.attackBase(game); // attack base
+						targetInRange = true; // it is attacking
 					}
 				}
-			if (targetsInRange.length > 0)
-			{
-				//unit1.attack(targetsInRange[Std.random(targetsInRange.length)]);
-				targetsInRange.sort(function(a:Unit, b:Unit):Int {
-					if (a.health == b.health)
-						return 0;
-					if (a.health > b.health)
-						return 1;
-					else
-						return -1;
-				});
-				unit1.attack(targetsInRange);
-			}
-			
-			// none of the targets where in range so start moving again
-			if (targetInRange == false)
+				// if there are targets in range
+				if (targetsInRange.length > 0)
+				{
+					// sort them to have target with least healt first
+					targetsInRange.sort(function(a:Unit, b:Unit):Int {
+						if (a.health == b.health)
+							return 0;
+						if (a.health > b.health)
+							return 1;
+						else
+							return -1;
+					});
+					unit1.attack(targetsInRange); // give unit array with targets that are in range
+				}
+				// none of the targets where in range so start moving again
+				if (targetInRange == false)
 				{
 					unit1.startMoving();
 				}
 			}
-	
 		}
 		// for all squads on side 2
 		for (squad1 in squads2)
@@ -160,101 +165,35 @@ class Unithandler extends Sprite
 						}
 					}
 				}
+				// if no units where in range, check to see if the enemy base is in range
 				if ( targetInRange == false)
 				{
+					//check if base is in range
 					if ( unit1.x - unit1.range <= 0)
 					{
 						unit1.attackBase(game);
 						targetInRange = true;
 					}
 				}
-			if (targetsInRange.length > 0)
-			{
-				//unit1.attack(targetsInRange[Std.random(targetsInRange.length)]);
-				targetsInRange.sort(function(a:Unit, b:Unit):Int {
+				if (targetsInRange.length > 0)
+				{
+					// sort them to have target with least healt first
+					targetsInRange.sort(function(a:Unit, b:Unit):Int {
 					if (a.health == b.health)
 						return 0;
 					if (a.health > b.health)
 						return 1;
 					else
 						return -1;
-				});
-				unit1.attack(targetsInRange);
-			}
-			// none of the targets where in range so start moving again
-			if (targetInRange == false)
-			{
-				unit1.startMoving();
-			}
-			}
-
-		}
-		//old range and target code
-		/*
-		for ( unit1 in units1)
-		{
-			var targetInRange:Bool = false;
-			targetInRange = false;
-			unit1.update(); // unit update
-			for ( unit2 in units2)
-			{
-				var distance = Math.abs(unit1.x - unit2.x);
-				//attack range check
-				if (distance < 50)
-				{
-					unit1.attack(unit2); // tell unit to attack if in range.
-					targetInRange = true;
+					});
+					unit1.attack(targetsInRange);// give unit array with targets that are in range
 				}
-			}
-			
-		if (targetInRange == false)
-			{
-				unit1.startMoving();
-			}
-		}
-		// side 2 units
-		for ( unit1 in units2)
-		{
-			var targetInRange:Bool = false;
-			targetInRange = false;
-			unit1.update(); // unit update
-			for ( unit2 in units1)
-			{
-				var distance = Math.abs(unit1.x - unit2.x);
-				//attack range check
-				if (distance < 50)
+				// none of the targets where in range so start moving again
+				if (targetInRange == false)
 				{
-					unit1.attack(unit2); // tell unit to attack if in range.
-					targetInRange = true;
+					unit1.startMoving();
 				}
-			}
-			if (targetInRange == false)
-			{
-				unit1.startMoving();
-			}
-		}
-		*/
-	}
-	/* obsolete unit death check, death checks now done by units themselfes
-	function deathCheck()
-	{
-		//Unit health check, removes units if they have no health remaining (move into seperate class(es))
-		for (unit in units1)
-		{
-			if (unit.health < 0)
-			{
-				units1.remove(unit);
-				removeChild(unit);
-			}
-		}
-		for (unit in units2)
-		{
-			if (unit.health < 0)
-			{
-				units2.remove(unit);
-				removeChild(unit);
 			}
 		}
 	}
-	*/
 }

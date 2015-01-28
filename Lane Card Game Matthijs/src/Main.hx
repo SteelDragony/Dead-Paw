@@ -12,19 +12,21 @@ import openfl.ui.Keyboard;
  * Main Class
  * 
  * Top level class of our game.
- * will either have the menu or game class as child.
+ * Has the Menu and Game classes as a child.
  * starts with menu class, which creates a "game" class when a game is started by the player by clicking on a button in the menu.
+ * 
+ * 
  * @author Matthijs van Gelder
  */
 
 class Main extends Sprite 
 {
 	
-	var menu:Menu = new Menu();
+	var menu:Menu = new Menu(); // menu class variable
 	var inited:Bool;
 	var game:Game; //define game outside the functions so it can be accesed by all of them.
-	public var started:Bool = false;
-	public var exitGameBool:Bool = false; 
+	public var started:Bool = false; // bool if the game is started
+	public var exitGameBool:Bool = false; // bool if the game needs to end
 	
 	
 	
@@ -38,8 +40,7 @@ class Main extends Sprite
 	{
 		if (inited) return;
 		inited = true;
-		drawmenu();
-		// (your code here)
+		drawmenu(); // calls the menu function
 
 		update(); // starts running the update function.
 	}
@@ -54,21 +55,21 @@ class Main extends Sprite
 
 		if (menu.start && started == false)
 		{
-			removeChild(menu);
+			removeChild(menu); // removes menu
 			game = new Game(); // actually create the game.
 			addChild(game); // add it as a child to display is.
 			started = true;
 		}
 		if (started)
 		{
-			game.update();
-			if (game.exitGameBool == true)
+			game.update(); // updates the game
+			if (game.exitGameBool == true) // check if the game needs to end
 			{
-				game.sound.stopAmbsounds ();
-				menu.playMusic ();
-				removeChild(game);
-				drawmenu();
-				exitGameBool = false;
+				game.sound.stopAmbsounds (); // stops ingame looped sound
+				menu.playMusic (); // start the menu music again
+				removeChild(game); // removes the game
+				drawmenu(); // creates the menu
+				exitGameBool = false; // resets the bools
 				menu.start = false;
 				started = false;
 			}

@@ -14,13 +14,22 @@ import openfl.Assets.loadSound;
 /**
  * ...
  * @author Andor Reineking
+ * 
+ * music class for the game
+ * will repeat a song until public function ends it
+ * 
+ * 
  */
 class Music extends Sprite 
 {
 
+	// Importing all songs
+	
 	var GameBGM1 = Assets.getSound("audio/music/GameBGM1.wav");
 	var Maintheme = Assets.getSound("audio/music/Maintheme.mp3");
 	var Win = Assets.getSound("audio/music/GameWin.wav");
+	
+	// variables for music volume and a soundchannel
 	
 	var musicVolume: Float;
 	var soundChannel:SoundChannel;
@@ -28,43 +37,53 @@ class Music extends Sprite
 	public function new() 
 	{
 		super();
-		
+		this.musicVolume = 1 ; // default volume
 	}
+	
+	// function to adjust the volume in this class, gets the musicvolume float as a input.
+	
+	public function updateMusicVolume (input:Float)
+	{
+		this.musicVolume = input ;
+	}
+	
+	// function to stop all music
 	
 	public function stopMusic ()
 	{
 		soundChannel.stop();
 	}
 	
-	public function gameMusic (input:Float)
+	// starts the ingame music (currently not implemented due to not having statisfactory music)
+	
+	public function gameMusic ()
 	
 	{
-		this.musicVolume = input ;
 		soundChannel = GameBGM1.play();
 		soundChannel.soundTransform = new SoundTransform(musicVolume);
 		soundChannel.addEventListener(Event.SOUND_COMPLETE, gameMusicRepeat );
-		
-		
 	}
+	
+	// repeats the ingame song
 	
 	function gameMusicRepeat (event:Event)
 	{
 		soundChannel = GameBGM1.play();
 		soundChannel.soundTransform = new SoundTransform(musicVolume);
 		soundChannel.addEventListener(Event.SOUND_COMPLETE, gameMusicRepeat );
-		
 	}
 	
-	public function mainMenuMusic (input:Float)
+	// starts the menu music
+	
+	public function mainMenuMusic ()
 	
 	{
-		this.musicVolume = input ;
 		soundChannel = Maintheme.play();
 		soundChannel.soundTransform = new SoundTransform(musicVolume);
 		soundChannel.addEventListener(Event.SOUND_COMPLETE, mainMenuMusicRepeat );
-		
-		
 	}
+	
+	// repeats the menu music
 	
 	function mainMenuMusicRepeat (event:Event)
 	{
