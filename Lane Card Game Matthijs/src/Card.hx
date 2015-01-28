@@ -175,12 +175,43 @@ class Card extends Sprite
 		var healthText = new TextField();
 		healthText.x = 50;
 		healthText.y = this.height - 25;
-		healthText.textColor = 0x32678B;
+		healthText.textColor = 0x000000;
 		healthText.scaleX = healthText.scaleY = 1;
 		healthText.text = Std.string(unitStats.health);
 		healthText.selectable = false;
-		healthText.width = 600;
+		healthText.width = 20;
+		healthText.height = 20;
 		addChild(healthText);
+		var softDamageText = new TextField();
+		softDamageText.x = 40;
+		softDamageText.y = this.height - 41;
+		softDamageText.textColor = 0x000000;
+		softDamageText.scaleX = softDamageText.scaleY = 1;
+		softDamageText.text = Std.string(unitStats.softDamage);
+		softDamageText.selectable = false;
+		softDamageText.width = 20;
+		softDamageText.height = 20;
+		addChild(softDamageText);
+		var apDamageText = new TextField();
+		apDamageText.x = 90;
+		apDamageText.y = this.height - 41;
+		apDamageText.textColor = 0x000000;
+		apDamageText.scaleX = apDamageText.scaleY = 1;
+		apDamageText.text = Std.string(unitStats.apDamage);
+		apDamageText.selectable = false;
+		apDamageText.width = 20;
+		apDamageText.height = 20;
+		addChild(apDamageText);
+		var armorText = new TextField();
+		armorText.x = 100;
+		armorText.y = this.height - 25;
+		armorText.textColor = 0x000000;
+		armorText.scaleX = armorText.scaleY = 1;
+		armorText.text = Std.string(unitStats.armor);
+		armorText.selectable = false;
+		armorText.width = 20;
+		armorText.height = 20;
+		addChild(armorText);
 		
 	}
 	// Draws a standard Card to display stats
