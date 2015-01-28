@@ -44,7 +44,7 @@ class Unit extends Sprite
 	
 	//local state, timers, and counter variales
 	var cooldownTimer:Int = 0;
-	var currentshot:Int = 1
+	var currentshot:Int = 1;
 	var side:Int;
 	var attacking:Bool = false;
 	var squad:Squad;

@@ -1,6 +1,7 @@
 package typedefs ;
 
 /**
+ * typedef for storing and handing the visual and audio data of an unit in a compact way
  * @author Matthijs van Gelder
  */
 

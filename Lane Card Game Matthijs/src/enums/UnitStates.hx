@@ -1,6 +1,8 @@
 package enums;
 
 /**
+ * states of the animation a unit can be in
+ * either moving shooting or idle
  * @author Matthijs van Gelder
  */
 

@@ -8,10 +8,17 @@ import openfl.events.MouseEvent;
  */
 class Hand extends Sprite
 {
+	// class scope vars
+	// stores reference to game
 	var game:Game;
+	
+	// stores which side it belongs to
 	var playerSide:Int;
+	
+	// the actual public array holding cards, ui needs to know length, thus public
 	public var handArray = new Array<Card>();
 	
+	// initilize vars when created
 	public function new( g:Game, side:Int ) 
 	{
 		super();
@@ -25,7 +32,6 @@ class Hand extends Sprite
 	// Displays cards for player 2 on the top of the screen these units move from RIGHT to LEFT
 	public function update()
 	{
-		// trace (handArray);
 		if (playerSide == 1)
 		{
 			for ( card in handArray )
@@ -57,13 +63,13 @@ class Hand extends Sprite
 		handArray.push(card);
 		card.addEventListener(MouseEvent.MOUSE_UP, sendToGame);
 	}
-	// Sends to chosen card to the game
-	// Removes it from the array so more cards fit in
+	// Sends to chosen card to the game to check if it can be played
 	function sendToGame(e:MouseEvent)
 	{
 		game.cardDrag(e.currentTarget);
 	}
 	
+	// function for the ai to play cards, considerig the ai does not have a mouse
 	public function aiPlayCard(lane:Lane)
 	{
 		var tempCard:Card = handArray.pop();
