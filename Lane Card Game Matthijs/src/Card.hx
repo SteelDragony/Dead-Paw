@@ -27,18 +27,23 @@ import openfl.text.TextField;
  */
 class Card extends Sprite
 {
+	// Holds the current class of game
 	var game:Game;
+	// Holds the class of hand where it's in
 	var hand:Hand;
-	
+	// Holds unit stats to be displayed on the card
 	public var unitStats:UnitStats;
+	// Holds unit grapich to be displayed on the card
 	public var unitGraphics:VisualData;
-	
+	// Store information converted out of a Json file, used to retrave information
 	var unitin:Dynamic;
-	
+	// Holds the side of this card
 	public var side:Int;
+	// Holds the 
+	var unitType:String;
 	
-	var unitType:String = "YPR";
-	
+	// When a card is created it requires:
+	// The hand is was played from, The player is was played from, the unit typ, and the instace of sound currently in use
 	public function new(handplayer:Hand, player:Int, unittype:String, soundClass:Sound) 
 	{
 		super();
@@ -50,116 +55,26 @@ class Card extends Sprite
 		hand = handplayer;
 		unitStats = Reflect.getProperty(this.unitin, unittype).unitStats;
 		unitGraphics = Reflect.getProperty(this.unitin, unittype).unitGraphics;
-		
-		/*
-		switch(unitType) 
-		{
-			case "YPR":
-				{
-				unitStats = unitin.YPR.unitStats;
-				
-					{
-						health : 20,
-						armor : 2,
-						softDamage : 4,
-						apDamage : 3,
-						accuracy : 70,
-						critChance : 10,
-						glancingChace : 20,
-						cooldown : 40,
-						burst : true,
-						burstRate : 2,
-						burstSize : 5,
-						range : 300,
-						moveSpeed : 5,
-					}
-				unitGraphics = unitin.YPR.unitGraphics;
-					{
-						spriteSheet : "img/YPR.png",
-						spriteWidth : 128,
-						spriteHeight: 128,
-						walkStart : 1,
-						walkEnd : 9,
-						shootStart : 10,
-						shootEnd : 14,
-						deathStart : 0,
-						deathEnd : 0,
-						numFrames : 15,
-						numRows : 4,
-						numColums : 4,
-						soundHandler : soundClass,
-					}
-				}
-			case "BearRifle":
-				{
-				unitStats = unitin.BearRifle.unitStats;
-				
-					{
-						health : 10,
-						armor : 2,
-						softDamage : 4,
-						apDamage : 3,
-						accuracy : 70,
-						critChance : 10,
-						glancingChace : 20,
-						cooldown : 100,
-						burst : false,
-						burstRate : 2,
-						burstSize : 3,
-						range : 200,
-						moveSpeed : 20,
-					}
-				unitGraphics = unitin.BearRifle.unitGraphics;
-				
-					{
-						spriteSheet : "img/Cat_Sprint.png",
-						spriteWidth : 256,
-						spriteHeight: 256,
-						walkStart : 1,
-						walkEnd : 11,
-						shootStart : 1,
-						shootEnd : 11,
-						deathStart : 0,
-						deathEnd : 0,
-						numFrames : 12,
-						numRows : 4,
-						numColums : 4,
-						soundHandler : soundClass,
-					}
-				}
-			case "BearAt":
-				{
-					unitStats = unitin.BearAt.unitStats;
-					unitGraphics = unitin.BearAt.unitGraphics;
-				}
-		}*/
-		/* Json parse test
-		var jsonin = Assets.getText("units/units.json");
-		var unitin = Json.parse(jsonin);
-		unitStats = unitin.YPR.unitStats;
-		unitGraphics = unitin.YPR.unitGraphics;
-		trace(unitStats);
-		trace(unitGraphics);
-		*/
 		addEventListener(Event.ADDED_TO_STAGE, drawCards);
 		addEventListener(Event.ADDED_TO_STAGE, drawGraphics);
-		//drawGraphics();
 	}
 	
+	// When a card is clicked it start dragging and starts lissting for a release
 	function drag(e:MouseEvent)
 	{
 		stage.addEventListener(MouseEvent.MOUSE_UP, stopdragging);
 		this.startDrag();
 	}
 	
+	// When the mouse is released after dragging this stops the drag
+	// It also calls the hand update so the cards are reset in the hand if the card was not played
 	public function stopdragging(e:MouseEvent)
 	{
-		// stage.removeEventListener(MouseEvent.MOUSE_UP, stopdragging);
 		this.stopDrag();
 		hand.update();
 	}
 
-	// Draws the first imageof a spirite sheet onto the card
+	// Draws the first imageof a spirite sheet onto the card and Displays all it's stats that are relavent for the player
 	function drawGraphics(e:Event)
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, drawGraphics);
@@ -171,7 +86,7 @@ class Card extends Sprite
 		image.addTileRect( unitRectangle );
 		image.addTileRect( unitRectangle2 );
 		image.drawTiles( this.graphics, [ ( -unitGraphics.spriteWidth / 2) + 75 , ( -unitGraphics.spriteHeight / 2 +85), 0], true );
-		
+		// Displays the Health of a Unit
 		var healthText = new TextField();
 		healthText.x = 50;
 		healthText.y = this.height - 25;
@@ -182,6 +97,7 @@ class Card extends Sprite
 		healthText.width = 20;
 		healthText.height = 20;
 		addChild(healthText);
+		// Displays the Soft damage of a Unit
 		var softDamageText = new TextField();
 		softDamageText.x = 40;
 		softDamageText.y = this.height - 41;
@@ -192,6 +108,7 @@ class Card extends Sprite
 		softDamageText.width = 20;
 		softDamageText.height = 20;
 		addChild(softDamageText);
+		// Displays the AP damage of a Unit
 		var apDamageText = new TextField();
 		apDamageText.x = 90;
 		apDamageText.y = this.height - 41;
@@ -202,6 +119,7 @@ class Card extends Sprite
 		apDamageText.width = 20;
 		apDamageText.height = 20;
 		addChild(apDamageText);
+		// Displays the Aram of a Unit
 		var armorText = new TextField();
 		armorText.x = 100;
 		armorText.y = this.height - 25;

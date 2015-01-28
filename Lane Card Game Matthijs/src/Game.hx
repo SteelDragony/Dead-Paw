@@ -46,13 +46,17 @@ class Game extends Sprite
 	public var lanes = new Array<Lane>();
 	
 	// the sound and music class and volumecontrol
-
 	var soundvolume:Float = 0.1 ;
 	var musicvolume:Float = 1.0 ;
 	var music = new Music ();
 	public var sound = new Sound ();
+	
+	// Holds current class of userinterface
 	var userinterface:Userinterface;
+	
+	// Bools used to monitor changes used for IF statements
 	public var handChange:Bool = true;
+	var victoryAchieved:Bool = false;
 	
 	// the ai player
 	var ai:AiPlayer;
@@ -71,59 +75,46 @@ function resize(e)
 		inited = true;
 		
 		// Adding children for sound and music libs //
-		
 		addChild (sound) ;
 		addChild (music) ;
-		
 		// playing Ambient sound loop //
-		
 		sound.soundAmb1(soundvolume);
-		
-		// (your code here)
+		// Adds background to the game
 		var backGround = new Bitmap(Assets.getBitmapData("img/Map.png"));
 		addChild(backGround);
+		// Adds unithandler to the game
 		unithandler = new Unithandler(this);
 		addChild(unithandler);
+		// Adds userinterface to the game
 		userinterface = new Userinterface(this);
 		addChild(userinterface);
+		// Adds decks for player 1 and 2/AI
 		deck1 = new Deck(this, 1);
 		deck2 = new Deck(this, 2);
-		//addChild(deck);
+		// Adds resources for player 1 and 2/AI
+		// Currently not is use
 		resourcesPlayer1 = 19;
 		resourcesPlayer1 = 19;
+		// Sets the HP op player 1 and 2/AI
 		player1hp = 100;
 		player2hp = 100;
-		
-		//unit test code, will be removed
-		/*
-		var unit = new Unit(2, 4, 0);
-		unit.x = (stage.stageWidth) / 2 - 50;
-		unit.y = (stage.stageHeight) / 2;
-		addChild(unit);
-		units1.push(unit);
-		
-		var unit2 = new Unit(100, 2, 1);
-		unit2.x = (stage.stageWidth) / 2 + 50;
-		unit2.y = (stage.stageHeight) / 2;
-		addChild(unit2);
-		units2.push(unit2);
-		*/
-		
-		//hand test code, needs to be changed
+		// Adds hands for player 1 and 2/AI
 		hand1 = new Hand( this, 1 );
 		hand2 = new Hand( this, 2 );
 		addChild(hand1);
 		addChild(hand2);
-			
+		
+		// Adds 5 Cards for player 1
 		for (i in 0 ... 5)
 		{
 			hand1.addCard(deck1.getCard(), sound);
 		}
+		// Adds 5 Cards for player 2/AI
 		for ( i in 0 ... 5)
 		{
 			hand2.addCard(deck1.getCard(), sound);
 		}
-		
+		// Creates invisable lanes
 		for ( i in 0 ... 5 )
 		{
 			var lane = new Lane(i);
@@ -131,130 +122,85 @@ function resize(e)
 			setChildIndex(lane, 0);
 			lanes.push(lane);
 		}
+		// Adds AI to the game
 		ai = new AiPlayer(this, hand2);
+		// Creates an funtion to exit the game and go back to menu
 		escButton();
 	}
-
+	
+	// Updates the game everyframe called from Main at a certain interval
+	// Updaters Unithandles, Userinterface, Handupdate, Ai update and victory check.
 	public function update()
 	{
 		unithandler.update();
 		userinterface.uiUpdate(hand1, hand2, player1hp, player2hp, resourcesPlayer1, resroucesPlayer2);
-		if ( handChange == true)
+		if ( handChange)
 		{
-		hand1.update();
-		hand2.update();
-		handChange = false;
+			hand1.update();
+			hand2.update();
+			handChange = false;
 		}
 		ai.update();
-		
+		if ( victoryAchieved == false )
+		{
+			vicotryCheck();
+		}
+	}
+	
+	// Runs when victory is achieved 
+	function vicotryCheck ()
+	{
 		if (player1hp <= 0)
 		{
-			exitGameBool = true;
+			victoryAchieved = true;
 			trace ("Player 2 wins the game");
+			Timer.delay(exitGame, 5000);
 		}
 		else if (player2hp <= 0)
 		{
-			exitGameBool = true;
+			victoryAchieved = true;
 			trace ("Player 1 wins the game");
+			Timer.delay(exitGame, 5000);
 		}
-		
-		// side 1 units
-		/*
-		for ( unit1 in units1)
-		{
-			var targetInRange:Bool = false;
-			targetInRange = false;
-			unit1.update(); // unit update
-			for ( unit2 in units2)
-			{
-				var distance = Math.abs(unit1.x - unit2.x);
-				//attack range check
-				if (distance < 50)
-				{
-					unit1.attack(unit2); // tell unit to attack if in range.
-					targetInRange = true;
-				}
-			}
-			
-			if (targetInRange == false)
-			{
-				unit1.startMoving();
-			}
-		}
-		// side 2 units
-		for ( unit1 in units2)
-		{
-			var targetInRange:Bool = false;
-			targetInRange = false;
-			unit1.update(); // unit update
-			for ( unit2 in units1)
-			{
-				var distance = Math.abs(unit1.x - unit2.x);
-				//attack range check
-				if (distance < 50)
-				{
-					unit1.attack(unit2); // tell unit to attack if in range.
-					targetInRange = true;
-				}
-			}
-			if (targetInRange == false)
-			{
-				unit1.startMoving();
-			}
-		}
-		
-		//Unit health check, removes units if they have no health remaining (move into seperate class(es))
-		for (unit in units1)
-		{
-			if (unit.health < 0)
-			{
-				units1.remove(unit);
-				removeChild(unit);
-			}
-		}
-		for (unit in units2)
-		{
-			if (unit.health < 0)
-			{
-				units2.remove(unit);
-				removeChild(unit);
-			}
-		}
-		*/
 	}
+	
+	// Function to add cards to hand of player 1
 	public function addCard1()
 	{
 		hand1.addCard(deck1.getCard(), sound);
 		handChange = true;
 	}
 	
+	// Function to add cards to the hand of player 2/AI
 	public function addCard2()
 	{
 		hand2.addCard(deck2.getCard(), sound);
 	}
 	
+	// Add Keyboard event to stage for when ESC is pressed
 	function escButton()
 	{
-		stage.addEventListener(KeyboardEvent.KEY_DOWN, exitGame);
-		//stage.addEventListener(MouseEvent.CLICK, exitGame);
-		this.graphics.beginFill(0xFFF000);
-		this.graphics.drawRect(10, 10, 200, 100);
-		this.graphics.endFill();
-		
-
+		stage.addEventListener(KeyboardEvent.KEY_DOWN, escESC);
 	}
-	function exitGame(e:KeyboardEvent)
+	
+	// Called when ESC is pressed changes exitBool
+	function escESC(e:KeyboardEvent)
 	{
 		if (e.keyCode == 27)
 		{
-			stage.removeEventListener(KeyboardEvent.KEY_DOWN, exitGame);
-			exitGameBool = true;
+			stage.removeEventListener(KeyboardEvent.KEY_DOWN, escESC);
+			exitGame();
 		}
-		
+	}
+	// Sets the varibales that exits the game
+	function exitGame ()	
+	{
+		exitGameBool = true;
 	}
 	
-	// starts draggin a card to play a unit, gets passed said card by hand. called from hand.
-	// might make card child of game, but how to handle false plays?
+	// Starts draggin a card to play a unit, gets passed said card by hand. called from hand.
+	// Calls Unithandler to create units
+	// Removes the card from hand
 	public function cardDrag(card:Card)
 	{
 		for (lane in lanes)
@@ -266,46 +212,18 @@ function resize(e)
 				hand1.handArray.remove(card);
 				removeChild(card);
 				stage.removeEventListener(MouseEvent.MOUSE_UP, card.stopdragging);
-				//if (card.unitGraphics.spriteSheet == "img/YPR.png")
-				//{
-					//if (card.side == 1)
-					//{
-						////hand1.addCard("YPR", sound);
-					//}
-					//if (card.side == 2)
-					//{
-						////hand2.addCard("YPR", sound);
-					//}
-				//}
-				//else if (card.unitGraphics.spriteSheet == "img/RuBearRifle.png")
-				//{
-					//if (card.side == 1)
-					//{
-						//hand1.addCard("BearRifle", sound);
-					//}
-					//if (card.side == 2)
-					//{
-						//hand2.addCard("BearRifle", sound);
-					//}
-				//}
 				sound.playSound("click");
 				handChange = true;
 			}
 		}
 	}
 	
-	
-	// very basic unit spawn
-	public function spawnUnitOnDrag(unitsStats:UnitStats, unitGrahics:VisualData, side:Int, lane:Lane )
+	// Spawns units by calling Unithandler
+	// Requires UnitStats, UnitGrahics, side, and Lane
+	// the Zero is for size of the unit was needed in earlier biulds
+ 	public function spawnUnitOnDrag(unitsStats:UnitStats, unitGrahics:VisualData, side:Int, lane:Lane )
 	{
 		unithandler.spawnSquad(unitsStats, unitGrahics, sound, side, 0, lane);
-		/* old spawn code
-		var unit = new Unit(2, 4, 0);
-		unit.x = 50;
-		unit.y = (stage.stageHeight) / 2 + (Std.random(51)-25);  // added randomized spawn height
-		unithandler.addChild(unit);
-		unithandler.units1.push(unit);
-		*/
 	}
 	
 	/* SETUP */

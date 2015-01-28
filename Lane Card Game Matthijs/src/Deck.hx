@@ -21,39 +21,36 @@ import openfl.Lib;
 	 * shuffleArray: to randomize the position of cards in the array
 	 * getCard: returns the top card of the array
 	 * fillDeck: (re)fills the array with cards
-	 * drawDeck: display the backside of a card to represent the deck
 	 * 
  * 
  * @author Matthijs van Gelder
  */
 class Deck extends Sprite
 {
-	var sound:Sound; 
+	// Holds the strings that make up the deck
 	var deckArray = new Array<String>();
-	var hand:Hand;
+	// Holds the current current clas of Game
 	var game:Game;
+	// Holds the side of the player for player 1 or 2/AI
 	var side:Int;
 	
-	
+	// Requires the current game and the side it was created for
+	// Then fills and shuffles the deck with cards
 	public function new(currentGame:Game,player:Int) 
 	{
 		super();
 		side = player;
-		sound = new Sound();
 		game = currentGame;
-		// hand = new Hand(game,0);
 		fillDeck();
 		shuffle();
 	}
 	
+	// This fills the deck with 10 cards of each type we currently have implemented
 	function fillDeck()
 	{
-		// trace ("filling");
 		for ( i in 0 ... 10)
 		{
-			// var card = new Card(hand, side, "YPR", sound);
-			deckArray.push("YPR");
-			
+			deckArray.push("YPR");	
 		}
 		for ( i in 0 ... 10)
 		{
@@ -97,24 +94,21 @@ class Deck extends Sprite
 		}
 		for ( i in 0 ... 10)
 		{
-			deckArray.push("PandaRifle");
-			
+			deckArray.push("PandaRifle");	
 		}
 		for( i in 0 ... 10)
 		{
-			// var card = new Card(hand, side, "BearRifle", sound);
 			deckArray.push("BearRifle");
 		}
 		for (i in 0 ... 10)
 		{
-			// var card = new Card(hand, side, "BearAt", sound);
 			deckArray.push("BearAt");
 		}
 	}
-	
+	// Shuffles deck in a randomly
+	// Creates a temp deck then replaces the old deck with tempdeck
 	function shuffle()
 	{
-		// trace ("shuffeling");
 		var temp = new Array<String>();
 		while ( deckArray.length > 0)
 		{
@@ -125,6 +119,9 @@ class Deck extends Sprite
 		deckArray = temp;
 		
 	}
+	// Pulic funtion to be called when cards are required
+	// Gives the caller a string to use
+	// Pick and removes the last element of the deck array
 	public function getCard():String
 	{
 		var tempcard:String;
