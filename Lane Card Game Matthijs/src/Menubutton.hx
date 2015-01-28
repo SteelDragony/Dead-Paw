@@ -11,10 +11,14 @@ import openfl.events.MouseEvent;
  */
 class Menubutton extends Sprite
 {
+	// Below are the variable's which declare the interactive "hoverable" buttons used in the menu.hx file and their properties//
+
 
 	var mainiamge:Bitmap;
 	var mainImageHover:Bitmap; 
-
+	
+	//public funtion new, this delcared that there are two images needed to initiate the the function HOVER// 
+	
 	public function new(image:String, imageHover:String) 
 	{
 	
