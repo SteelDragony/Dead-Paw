@@ -12,8 +12,6 @@ import flash.system.System;
 class Menu extends openfl.display.Sprite
 {
 	// Down below are are all the var's for the menu which declare the buttons and sound for the menu //
-
-	// variables for the music class and volume
 	
 	var musicvolume:Float = 1.0 ;
 	var menuMusic = new Music();
@@ -45,8 +43,8 @@ class Menu extends openfl.display.Sprite
 		
 	}
 	
-	// funtion draw menu, this actualy draws the menu, using a and y parameters// 
-	//openfl always calculates the position from the top left corner//
+	
+	// creates and places the buttons.
 	
 	function drawmenu() {
 
@@ -67,33 +65,29 @@ class Menu extends openfl.display.Sprite
 	
 	function startGame(e:MouseEvent) 
 	{
-		//startbutton.removeEventListener(MouseEvent.CLICK, startGame);
-		//exitbutton.removeEventListener(MouseEvent.CLICK, exit);
 		start = true;
 		menuMusic.stopMusic ();
 		removeChild (menuMusic);
 	}
 	
-	// function exit, this shuts down the program and stops all code. //
+		// function exit, this shuts down the program and stops all code. //
 	
 	function exit(e:MouseEvent) 
 	{
 		System.exit(0);
 	}
 	
-	// function drawbackgound, this function called the var background and draws the Background.png file, because we did not state positioning
-	// x.y/0.0 its gets drawn 0.0 and used the full scale of the picture, which in this case is the size of the game.//
+		// function drawbackgound, this function called the var background and draws the Background.png file, because we did not state positioning
+		// x.y/0.0 its gets drawn 0.0 and used the full scale of the picture, which in this case is the size of the game.//
 	
 	function drawbackground() 
 	
 	{
 		var background = new Bitmap(Assets.getBitmapData("img/Background.png"));
 		addChildAt (background, 0);
-	
-		
 	}
 
-	// function that will add the music class, update the volume and start the music.
+		// function that will add the music class, update the volume and start the music.
 	
 	public function playMusic ()
 	{
