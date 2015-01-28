@@ -12,6 +12,8 @@ import flash.system.System;
 class Menu extends openfl.display.Sprite
 {
 
+	// variables for the music class and volume
+	
 	var musicvolume:Float = 1.0 ;
 	var menuMusic = new Music();
 			
@@ -32,7 +34,7 @@ class Menu extends openfl.display.Sprite
 		
 		drawbackground();
 		drawmenu();
-		playMusic();
+		playMusic(); // calls the music class
 		
 	}
 	
@@ -72,9 +74,12 @@ class Menu extends openfl.display.Sprite
 		
 	}
 
+	// function that will add the music class, update the volume and start the music.
+	
 	public function playMusic ()
 	{
 		addChild(menuMusic);
-		menuMusic.mainMenuMusic (musicvolume) ;
+		menuMusic.updateMusicVolume (musicvolume);
+		menuMusic.mainMenuMusic () ;
 	}
 }

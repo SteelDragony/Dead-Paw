@@ -13,10 +13,17 @@ import openfl.Assets.loadSound;
 /**
  * ...
  * @author Andor Reineking
+ * 
+ * This is the sound system of the game. It works by getting a string input that will call functions to play sounds.
+ * Many of the sounds have multiple variations and the functions will randomly pick one.
+ * The system also gets a Soundvolume Float input to adjust the overall volume.
+ * 
+ * 
  */
 class Sound extends Sprite 
 {
 
+	// Importing all assests
 	
 	var amb1 = Assets.getSound("audio/Amb_1.mp3");
 	var at4sound1 = Assets.getSound("audio/AT4_1.wav");
@@ -57,6 +64,8 @@ class Sound extends Sprite
 	var rpg1 = Assets.getSound("audio/RPG7_1.wav");
 	var rpg2 = Assets.getSound("audio/RPG7_2.wav");
 	
+	// creating the needed variables, one volume, and 2 sepparate sound channels.
+	
 	var soundVolume: Float;
 	var ambChannel:SoundChannel;
 	var channel:SoundChannel;
@@ -64,24 +73,28 @@ class Sound extends Sprite
 	public function new() 
 	{
 		super();
+		this.soundVolume = 1 ; // default sound volume
 	}
+	
+	// Function that gets called with a string input, this will choose the sound it will play and activate functions acourdinly.
+	// When there is only one sound it will play directly form this function.
 	
 	public function playSound (input:String)
 	{
 		switch (input)
 		{
 			case "click" :
-			soundClick (soundVolume);
+			channel = click.play( 0, 0, new SoundTransform(soundVolume ) );
 			case "tankGun" :
-			soundMbtGun (soundVolume);
+			soundMbtGun ();
 			case "at4" :
-			soundAt4 (soundVolume);
+			soundAt4 ();
 			case "autoCannon" :
-			soundAutoCannon (soundVolume);
+			soundAutoCannon ();
 			case "ak" :
-			soundAK (soundVolume);
+			soundAK ();
 			case "atgm" :
-			soundATGM (soundVolume) ;
+			soundATGM () ;
 			case "mg3" :
 			channel = burstMG3.play( 0, 0, new SoundTransform(soundVolume ) );
 			case "pkp" :
@@ -95,39 +108,39 @@ class Sound extends Sprite
 			case "grenadeLauncher" :
 			channel = grenadeLauncher.play( 0, 0, new SoundTransform(soundVolume ) );
 			case "smg" :
-			soundSMG (soundVolume) ;
+			soundSMG () ;
 			case "sniper" :
-			soundSniper (soundVolume) ;
+			soundSniper () ;
 			case "rpg" :
-			soundRPG (soundVolume) ;
+			soundRPG () ;
 			default :
-			testingSound (soundVolume);
+			testingSound ();
 		}
 	}
 	
-	public function testingSound (input:Float)
+	// Testing function and also the default function that gets called when a unrecocnisable string is used.
+	
+	public function testingSound ()
 	{
-		this.soundVolume = input ;
 		channel = beep.play( 0, 0, new SoundTransform(soundVolume ) );
-		
 	}
+	
+	// function to adjust the volume in this class, gets the soundvolume float as a input.
 	
 	public function updateSoundVolume (input:Float)
 	{
 		this.soundVolume = input ;
-		ambChannel.soundTransform = new SoundTransform(soundVolume);
-		channel.soundTransform = new SoundTransform(soundVolume);
 	}
 	
-	public function soundAmb1 (input:Float)
+	// the ambient sound start function, will play a ambient background sound.
+	
+	public function soundAmb1 ()
 	{
-		
-		this.soundVolume = input ;
-		
 		ambChannel = amb1.play( 0, 0, new SoundTransform(soundVolume ) );
 		ambChannel.addEventListener(Event.SOUND_COMPLETE, soundAmb1Repeat );
-		
 	}
+	
+	// the ambient repeat function will reapeat the sound.
 	
 	function soundAmb1Repeat (event:Event)
 	{
@@ -135,20 +148,17 @@ class Sound extends Sprite
 		ambChannel.addEventListener(Event.SOUND_COMPLETE, soundAmb1Repeat );
 	}
 	
+	// public function to stop the amb sound.
+	
 	public function stopAmbsounds ()
 	{
 		ambChannel.stop();
 	}
 	
-	function soundClick (input:Float)
-	{
-		this.soundVolume = input ;
-		channel = click.play( 0, 0, new SoundTransform(soundVolume ) );
-	}
+	// The basic function setup that randomly chooses a sound from the different variants. this will be repeated for all sound with multiple variants
 	
-	function soundAt4 (input:Float)
+	function soundAt4 ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(3) ;
 		switch( randomSoundNumber ) 
 		{	
@@ -163,9 +173,8 @@ class Sound extends Sprite
 		}	
 	}
 	
-	function soundAutoCannon (input:Float)
+	function soundAutoCannon ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(3) ;
 		switch( randomSoundNumber ) 
 		{	
@@ -180,9 +189,8 @@ class Sound extends Sprite
 		}	
 	}
 	
-	function soundMbtGun (input:Float)
+	function soundMbtGun ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(5) ;
 		switch( randomSoundNumber ) 
 		{
@@ -201,9 +209,8 @@ class Sound extends Sprite
 		}
 	}
 	
-	function soundAK (input:Float)
+	function soundAK ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(4) ;
 		switch( randomSoundNumber ) 
 		{
@@ -221,9 +228,8 @@ class Sound extends Sprite
 	}
 	
 		
-	function soundATGM (input:Float)
+	function soundATGM ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(4) ;
 		switch( randomSoundNumber ) 
 		{
@@ -240,9 +246,8 @@ class Sound extends Sprite
 		}	
 	}
 	
-	function soundSMG (input:Float)
+	function soundSMG ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(3) ;
 		switch( randomSoundNumber ) 
 		{
@@ -257,9 +262,8 @@ class Sound extends Sprite
 		}	
 	}
 	
-	function soundSniper (input:Float)
+	function soundSniper ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(2) ;
 		switch( randomSoundNumber ) 
 		{
@@ -272,9 +276,8 @@ class Sound extends Sprite
 		}	
 	}
 	
-	function soundRPG (input:Float)
+	function soundRPG ()
 	{
-		this.soundVolume = input ;
 		var randomSoundNumber:Int = Std.random(2) ;
 		switch( randomSoundNumber ) 
 		{

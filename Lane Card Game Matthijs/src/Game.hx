@@ -75,9 +75,14 @@ function resize(e)
 		addChild (sound) ;
 		addChild (music) ;
 		
+		// update the sound and music volume
+		
+		sound.updateSoundVolume (soundvolume);
+		music.updateMusicVolume (musicvolume);
+		
 		// playing Ambient sound loop //
 		
-		sound.soundAmb1(soundvolume);
+		sound.soundAmb1();
 		
 		// (your code here)
 		var backGround = new Bitmap(Assets.getBitmapData("img/Map.png"));
